@@ -1,24 +1,62 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { Route, Routes } from "react-router-dom";
+import Home from "./component/pages/Home";
+import Departments from "./component/pages/Departments";
+import Contactus from "./component/pages/Contactus";
+import Toxicology from "./component/ForDoctors/Toxicology";
+import Histopathology from "./component/ForDoctors/Histopathology";
+import Hematopathology from "./component/ForDoctors/Hematopathology";
+import Chemicalpathology from "./component/ForDoctors/Chemicalpathology";
+import Microbiology from "./component/ForDoctors/Microbiology";
+import Virology from "./component/ForDoctors/Virology";
+import Molecular from "./component/ForDoctors/Molecular";
+import Homesampling from "./component/Forpatients/Homesampling";
+import Login from "./component/Login&Sign/Login";
+import Signup from "./component/Login&Sign/Signup";
+import Sidebar from "./Dashboard/Sidebar";
+import Dashboard from "./Dashboard/Dashboard";
+import { useState } from "react";
+import MainFile from "./Dashboard/MainFile";
+import HealthPackages from "./component/pages/HealthPackages";
+import CartPage from "./component/pages/CartPage";
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+          <Route  path='/home' element={<Home/>}/>
+          <Route path='/department' element={<Departments/>}/>
+          <Route path='/contact' element={<Contactus/>}/>
+          <Route path='/Toxicology' element={<Toxicology/>}/>
+          <Route path='/Histopathology' element={<Histopathology/>}/>
+          <Route path='/Hematopathology' element={<Hematopathology/>}/>
+          <Route path='/ChemicalPathology' element={<Chemicalpathology/>}/>
+          <Route path='/Microbiology' element={<Microbiology/>}/>
+          <Route path='/Virology' element={<Virology/>}/>
+          <Route path='/molecular' element={<Molecular/>}/>
+          <Route path='/homesampling' element={<Homesampling/>}/>
+          <Route path='/login' element={<Login/>}/>
+          <Route path='/register' element={<Signup/>}/>
+          <Route path='/homeSampling' element={<Homesampling/>}/>
+          <Route path='/healthPackages' element={<HealthPackages/>}/>
+          <Route path='/Cartpage/:id' element={<CartPage/>}/>
+
+
+          {/* <Route  path='/' element={<MainFile/>}/>
+          <Route  path='/maindashboard' element={<MainFile/>}/> */}
+
+          
+
+
+          
+    
+
+      </Routes>
+
+      
+    </>
   );
 }
 
