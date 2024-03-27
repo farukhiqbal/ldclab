@@ -36,11 +36,11 @@ const Footer = () => {
                     <li className="flex text-[1rem]">
                       <b>Call us: </b> +92301-6888226
                     </li>
-                    <li className="flex text-[1rem] mr">
-                      <b>Lahore: </b> 7-Jail Road Main Gulberg
+                    <li className="flex text-[1rem]">
+                      <b>Lahore: </b>117 G-1, G1 block, near Doctor’s Hospital, Opp. MCB Bank, Johar Town, Lahore
                     </li>
-                    <li className="flex text-[1rem] mr">
-                      <b>Email: </b> lahorediagnosticcenter.labs@gmail.com
+                    <li className="flex text-[1rem] ">
+                      <b>Email:</b> lahorediagnosticcenter.labs@gmail.com
                     </li>
                   </ul>
                 </div>
