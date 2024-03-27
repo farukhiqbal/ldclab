@@ -161,7 +161,7 @@ const Header = () => {
               {/* bars  */}
               <button
                 onClick={handleNav}
-                className=" absolute top-[2rem] flex    right-4  md:right-[8em]  justify-right   px-2 p-2 text-xl font-medium text-black"
+                className=" absolute top-[.7rem] flex    right-4  md:right-[8em]  justify-right   px-2 p-2 text-xl font-medium text-black"
               >
                 <FaBarsStaggered className="text-[1.6rem]" />
               </button>
@@ -182,13 +182,17 @@ const Header = () => {
                 </div>
               </div>
             </div>
-            <div className="  absolute    justify-right       right-[5rem]   md:right-[18rem]  mt-5 ">
+            <div className="  absolute    justify-right       right-[5rem]   md:right-[18rem]   mt-1   md:mt-5 ">
               <CartPage />
             </div>
 
             <div className="flex  items-center h-full w-full ml-0  md:ml-[0.8rem] lg:ml-[3rem]">
               <Link to="/" onClick={handleLinkClick}>
-                <img className="h-[100px] w-[300px] " src={logo} alt="" />
+                <img
+                  className="        h-[60px]  md:h-[100px]   w-[170px]   md:w-[300px]   lg:w-[300px] "
+                  src={logo}
+                  alt=""
+                />
               </Link>
             </div>
           </div>

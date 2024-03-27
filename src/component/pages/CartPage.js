@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { TfiClose } from "react-icons/tfi";
 import { MdAddShoppingCart } from "react-icons/md";
 
-
 const CartDropdown = ({ cartItems, removeFromCart }) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -28,7 +27,7 @@ const CartDropdown = ({ cartItems, removeFromCart }) => {
 
       {/* Dropdown content */}
       {isOpen && (
-        <div className="absolute right-[-5rem] ease-in-out duration-500  w-[30.2rem]   lg:right-[-10rem] mt-8 text-white   lg:w-[25rem] p-5 bg-[#2f446e] border border-gray-300 shadow-lg rounded">
+        <div className="absolute right-[-5rem] ease-in-out duration-500  w-[25rem]  md:w-[30.2rem]   lg:right-[-10rem]    mt-5    lg:mt-8 text-white   lg:w-[25rem] p-5 bg-[#2f446e] border border-gray-300 shadow-lg rounded">
           {/* Total payment */}
           <div className="flex justify-between  border-b-[3px] border-white ">
             <div className="flex gap-2   ml-3">
@@ -37,7 +36,7 @@ const CartDropdown = ({ cartItems, removeFromCart }) => {
                 alt="Cart Icon"
                 className="h-[30px] w-[30px] text-white "
               /> */}
-              <MdAddShoppingCart  className="h-[30px] w-[30px] text-white " />
+              <MdAddShoppingCart className="h-[30px] w-[30px] text-white " />
 
               <p className="font-bold text-lg">Cart</p>
             </div>
@@ -74,9 +73,8 @@ const CartDropdown = ({ cartItems, removeFromCart }) => {
           )}
           {/* Checkout and Proceed buttons */}
           <div className="flex justify-center gap-5  mt-0 border-t-2 border-white  px-4 py-2">
-              
             <button className="bg-blue-500 text-white px-4 py-2  mt-3 rounded">
-               Add More
+              Add More
             </button>
             <button className="bg-green-500 text-white px-4 py-2  mt-3 rounded">
               Proceed

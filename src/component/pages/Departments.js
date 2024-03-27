@@ -128,7 +128,7 @@ const Departments = ({ deviceType }) => {
             {Healthimage.map((image) => (
               <div
                 key={image.id}
-                className="border-black  w-[300px]   h-[40vh]"
+                className="border-black     mx-auto w-[300px]   lg:w-[300px]    h-[40vh]"
               >
                 <div className="w-full md:w-[300px] md:px-2  relative h-[200px]">
                   <img
@@ -138,7 +138,7 @@ const Departments = ({ deviceType }) => {
                   />
                 </div>
 
-                <div className="border-2 mx-2  border-white hover:bg-[#2e3092] bg-[#06087c] mt-1  py-2 rounded-md">
+                <div className="border-2      lg:mx-2   border-white hover:bg-[#2e3092] bg-[#06087c] mt-1  py-2 rounded-md">
                   <p className="text-center  text-lg py-2 text-white font-semibold">
                     {image.title}
                   </p>
