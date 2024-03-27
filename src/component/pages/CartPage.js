@@ -12,7 +12,7 @@ const CartDropdown = ({ cartItems, removeFromCart }) => {
       {/* Cart icon with count badge */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="relative flex items-center justify-center      h-8 lg:h-12 w-[2rem]"
+        className="relative flex items-center justify-center    mt-1  h-8 lg:h-12 w-[2rem]"
       >
         <img
           src="https://www.phadkelabs.com/public/Frontend/images//icons/cart.svg"
