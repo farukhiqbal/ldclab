@@ -12,12 +12,12 @@ const CartDropdown = ({ cartItems, removeFromCart }) => {
       {/* Cart icon with count badge */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="relative flex items-center justify-center h-12 w-[2rem]"
+        className="relative flex items-center justify-center      h-8 lg:h-12 w-[2rem]"
       >
         <img
           src="https://www.phadkelabs.com/public/Frontend/images//icons/cart.svg"
           alt="Cart Icon"
-          className="h-full w-full mt-2 mr-4"
+          className="h-full w-full mt-4 mr-4"
         />
         {/* Display count of items in badge */}
         <span className="absolute top-0 right-0 bg-red-500 text-xs text-white rounded-full px-2 py-1">
@@ -27,7 +27,7 @@ const CartDropdown = ({ cartItems, removeFromCart }) => {
 
       {/* Dropdown content */}
       {isOpen && (
-        <div className="absolute right-[-5rem] ease-in-out duration-500  w-[25rem]  md:w-[30.2rem]   lg:right-[-10rem]    mt-5    lg:mt-8 text-white   lg:w-[25rem] p-5 bg-[#2f446e] border border-gray-300 shadow-lg rounded">
+        <div className="absolute right-[-5rem] ease-in-out duration-500  w-[20rem]  md:w-[30.2rem]   lg:right-[-10rem]    mt-5    lg:mt-8 text-white   lg:w-[25rem] p-5 bg-[#2f446e] border border-gray-300 shadow-lg rounded">
           {/* Total payment */}
           <div className="flex justify-between  border-b-[3px] border-white ">
             <div className="flex gap-2   ml-3">

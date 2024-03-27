@@ -192,7 +192,7 @@ const Home = () => {
           </div>
 
           <div className="span-2  px-[2rem] w-full  mt-5 md:px-[4rem]  md:w-[80%] ">
-            <p className="text-lg  leading-[3rem]  ">
+            <p className="     text-md  lg:text-lg  leading-[3rem]  ">
               <span className="font-semibold">
                 Welcome to Lahore Diagnostic Center!
               </span>
