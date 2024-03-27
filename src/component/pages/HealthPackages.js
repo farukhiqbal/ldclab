@@ -14,9 +14,8 @@ const HealthPackages = () => {
   const startIndex = (page - 1) * productsPerPage;
   const endIndex = page * productsPerPage;
 
-
-// Filter the data based on the searchTerm
-const filteredData = FilterData.filter((item) => {
+  // Filter the data based on the searchTerm
+  const filteredData = FilterData.filter((item) => {
     return item.title.toLowerCase().includes(searchTerm.toLowerCase());
   });
 
@@ -47,16 +46,16 @@ const filteredData = FilterData.filter((item) => {
               </div>
             </div>
 
-            <div className="  flex   mt-3  md:mt-0  justify-between  md:justify-end gap-5">
-              <div className="health-btn bg-blue-600 text-white hover:bg-blue-500 pt-1 font-bold px-3 rounded-md">
-                <button className="btn flex gap-3 p-2 ">
+            <div className="  flex   mt-3  md:mt-0  justify-between  md:justify-end     gap-2  md:gap-5">
+              <div className="health-btn bg-blue-600 text-white hover:bg-blue-500 pt-1 font-bold  px-1  md:px-3 rounded-md">
+                <button className="btn flex   gap-2 md:gap-3 p-2 ">
                   <img src="https://www.phadkelabs.com/public/Frontend/images//icons/filter-grey-home.svg" />
                   Home Visit
                 </button>
               </div>
 
-              <div className="health-btn  bg-blue-600 text-white hover:bg-blue-500 pt-1 font-bold px-3 rounded-md  ">
-                <button className="btn flex gap-3   p-2">
+              <div className="health-btn  bg-blue-600 text-white hover:bg-blue-500 pt-1 font-bold  px-1 md:px-3 rounded-md  ">
+                <button className="btn flex   gap-2  md:gap-3   p-2">
                   <img src="https://www.phadkelabs.com/public/Frontend/images//icons/filter-grey-lab.svg" />
                   Lab Visit
                 </button>
