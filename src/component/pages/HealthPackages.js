@@ -98,13 +98,13 @@ const HealthPackages = () => {
                 </div>
               </div>
               <div className="price-cart-box">
-                <Link to="/healthdetail">
+                <Link to="#">
                   <div className="price">
                     <span>{item.price}</span>
                   </div>
                 </Link>
                 <div className="addto-cart">
-                  <Link to={`/cartpage/${item.id}`} className="cart-image">
+                  <Link to='#' className="cart-image">
                     <img
                       src="https://www.phadkelabs.com/public/Frontend/images//icons/cart.svg"
                       alt="Add to Cart"

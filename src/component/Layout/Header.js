@@ -161,7 +161,7 @@ const Header = () => {
               {/* bars  */}
               <button
                 onClick={handleNav}
-                className=" absolute top-[.7rem] flex    right-4  md:right-[8em]  justify-right   px-2 p-2 text-xl font-medium text-black"
+                className=" absolute   top-[.8rem]  lg:top-[2.2rem] flex    right-4  md:right-[8em]  justify-right   px-2 p-2 text-xl font-medium text-black"
               >
                 <FaBarsStaggered className="text-[1.6rem]" />
               </button>
