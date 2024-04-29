@@ -26,18 +26,18 @@ const responsive = {
 const MultiCarousel = ({ deviceType }) => {
   
     const Healthimage = [
-
+      
 
         {
           title: 'Microbiology',
           imagesrc: 'https://chughtailab.com/wp-content/uploads/2021/01/Microbiology-1-300x187.jpg',
-          link: 'https://chughtailab.com/departments/microbiology/',
+          link: '#',
           
         },
         {
           title: 'Virology',
           imagesrc: 'https://chughtailab.com/wp-content/uploads/2021/01/Virology-1-300x187.jpg',
-          link: 'https://chughtailab.com/departments/virology/',
+          link: '#',
         },
       
         // {
@@ -49,20 +49,20 @@ const MultiCarousel = ({ deviceType }) => {
           {
             title: 'Hematopathology',
             imagesrc: 'https://chughtailab.com/wp-content/uploads/2021/01/Hematology-1-300x187.jpg',
-            link: 'https://chughtailab.com/departments/virology/',
+            link: '#',
           },
        
           
           {
-            title: 'Toxicology',
+            title: 'Biochemistry',
             imagesrc: 'https://chughtailab.com/wp-content/uploads/2023/03/toxicology_th.jpg',
-            link: 'https://chughtailab.com/departments/virology/',
+            link: '#',
           },
          
           {
-            title: 'Virology',
+            title: 'Molecular Pathology',
             imagesrc: 'https://chughtailab.com/wp-content/uploads/2021/01/Virology-1-300x187.jpg',
-            link: 'https://chughtailab.com/departments/virology/',
+            link: '#',
           },
          
     

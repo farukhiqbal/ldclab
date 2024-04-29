@@ -18,7 +18,7 @@ const Chemicalpathology = () => {
 
       <div className=" w-full bg-gray-100  py-[5rem]  ">
         <div className="w-[85vw]  mx-auto ">
-          <div className="grid    grid-cols-2 ">
+          <div className="grid    grid-cols-1  lg:grid-cols-2 ">
             <div className=" pr-[3rem]">
               <h1 className="text-3xl  text-[#2e3092]  font-bold ">
                 CLINICAL CHEMISTRY & IMMUNOLOGY
@@ -44,7 +44,7 @@ const Chemicalpathology = () => {
                 are available to cover different diagnostic tests. The details
                 are as follows:
               </b>
-              <ul className="list-decimal  mt-2 px-2">
+              <ul className="list-decimal mb-5  mt-2 px-2">
                 <li>Chemistry Immunoassay Analyzer (Cobas 6000 – Roche)</li>
                 <li>Immunoassay Analyzer (Liaison XL)</li>
                 <li>Immunoassay Analyzer (Liaison Diaisorin)</li>

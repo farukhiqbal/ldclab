@@ -5,12 +5,13 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import MultiCarousel from "./Multicaosel";
 import Whatsapp from "./Whatsapp";
 import Ceo from "../../images/ceo.jpeg";
-import banner1 from "../../images/dsk_ban_0_new.webp";
-import banner2 from "../../images/dsk_ban_1.webp";
-import banner3 from "../../images/dsk_ban_2.webp";
-import banner4 from "../../images/dsk_ban_3.webp";
+import banner1 from "../../images/ldc3.jpg";
+// import banner2 from "../../images/dsk_ban_1.webp";
+// import banner3 from "../../images/";
+// import banner4 from "../../images/";
 import banner5 from "../../images/dsk_ban_4.webp";
-import banner6 from "../../images/dsk_ban_5.webp";
+import banner6 from "../../images/ldc2.jpg";
+
 
 import CartPage from "./CartPage";
 import { Link } from "react-router-dom";
@@ -22,24 +23,24 @@ const Home = () => {
       id: 1,
       img: banner1,
     },
+    // {
+    //   id: 2,
+    //   // img: banner2,
+    // },
+    // {
+    //   id: 3,
+    //   // img: banner3,
+    // },
+    // {
+    //   id: 4,
+    //   // img: banner4,
+    // },
     {
-      id: 2,
-      img: banner2,
-    },
-    {
-      id: 3,
-      img: banner3,
-    },
-    {
-      id: 4,
-      img: banner4,
-    },
-    {
-      id: 5,
+      id:2,
       img: banner5,
     },
     {
-      id: 6,
+      id: 3,
       img: banner6,
     },
   ];

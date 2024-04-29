@@ -108,11 +108,11 @@ const Header = () => {
 
   return (
     <>
-      <div className="  flex   justify-center    lg:justify-between  bg-[#8cc242]">
-        <div className=" hidden           lg:flex pt-[5px] text-md font-[500]       md:pr-[10rem] lg:ml-4      lg:pr-[2rem] h-[40px] text-white   md:gap-x-[10px]  lg:gap-x-[20px]">
+      <div className="  flex   justify-center  lg:justify-between  bg-[#8cc242]">
+        <div className=" hidden           lg:flex pt-[5px] text-md font-[500]    md:ml-0   md:pr-[1rem] lg:ml-4      lg:pr-[2rem] h-[40px] text-white   md:gap-x-[10px]  lg:gap-x-[20px]">
           <Link
             to="#"
-            className=" no-underline  ml-[2rem]    lg:ml-[4.2rem] flex text-white cursor-pointer hover:text-[#2e3092] hover:text-underline"
+            className=" no-underline   ml-[6rem]     md:ml-[1rem]     lg:ml-[4.2rem] flex text-white cursor-pointer hover:text-[#2e3092] hover:text-underline"
           >
             <HiOutlineMail className=" mr-2 text-[#2e3092]   text-[1.3rem]  mt-[5px]" />
             lahorediagnosticcenter.labs@gmail.com
@@ -120,7 +120,7 @@ const Header = () => {
 
           <Link
             to="#"
-            className=" no-underline  lg:ml-[0.5rem] flex text-white cursor-pointer hover:text-[#2e3092] hover:text-underline"
+            className=" no-underline     md:ml-0    lg:ml-[0.5rem] flex text-white cursor-pointer hover:text-[#2e3092] hover:text-underline"
           >
             <FaPhoneAlt className="   mr-2  text-[#2e3092]   mt-[5px]" />
             +9234 123 123 25
@@ -134,7 +134,7 @@ const Header = () => {
           </Link>
         </div>
 
-        <div className="flex  text-[18px] font-[600] py-2 pr-1     lg:pr-[11rem] bg-[#8cc242] h-[40px] text-white justify-center md:justify-center lg:justify-end sm:gap-x-[10px] gap-x-[10px]  md:gap-x-[30px]">
+        <div className="flex     sm:hidden  md:flex  text-[18px] font-[600] py-2 pr-1  md:pr-[1rem]   lg:pr-[11rem] bg-[#8cc242] h-[40px] text-white justify-center md:justify-end lg:justify-end sm:gap-x-[10px] gap-x-[10px]  md:gap-x-[10px]">
           <Link
             to="/login"
             className=" no-underline text-white cursor-pointer hover:text-[#2e3092] hover:text-underline"
@@ -189,7 +189,7 @@ const Header = () => {
             <div className="flex  items-center h-full w-full ml-0  md:ml-[0.8rem] lg:ml-[3rem]">
               <Link to="/" onClick={handleLinkClick}>
                 <img
-                  className="        h-[60px]  md:h-[100px]   w-[170px]   md:w-[300px]   lg:w-[300px] "
+                  className="        h-[60px]  md:h-[100px]   w-[170px]   md:w-[250px]   lg:w-[250px] "
                   src={logo}
                   alt=""
                 />

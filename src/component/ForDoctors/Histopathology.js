@@ -18,13 +18,13 @@ const Histopathology = () => {
 
       <div className=" w-full bg-gray-100  py-[5rem]  ">
         <div className="w-[85vw]  mx-auto ">
-          <div className="grid    grid-cols-2 ">
+          <div className="grid    grid-cols-1   lg:grid-cols-2 ">
             <div className=" pr-[3rem]">
               <h1 className="text-3xl  text-[#2e3092]  font-bold ">
                 EXCELLENCE IN HISTOPATHOLOGY
               </h1>
 
-              <p className="text-[16px] mt-5 ">
+              <p className="text-[16px]   mb-5 mt-5 ">
                 LDC Lab  has a long history of excellence in Histopathology.
                 The department is staffed by 17 consultants, 3 fellows, and 13
                 resident pathologists. It is one of the busiest histopathology

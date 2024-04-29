@@ -25,13 +25,13 @@ const Hematopathology = () => {
 
       <div className=" w-full bg-gray-100  py-[5rem]  ">
         <div className="w-[85vw]  mx-auto ">
-          <div className="grid    grid-cols-2 ">
+          <div className="grid    grid-cols-1   lg:grid-cols-2 ">
             <div className=" pr-[3rem]">
               <h1 className="text-3xl  text-[#2e3092]  font-bold ">
                 CLINICAL AND FORENSIC TOXICOLOGY DEPARTMENT
               </h1>
 
-              <p className="text-[16px] mt-5 ">
+              <p className="text-[16px]    mt-5 ">
                 The Clinical and Forensic Toxicology Department has been
                 established under the umbrella of Chughtai Healthcare to provide
                 credible and reliable services to the nation of Pakistan. This
@@ -49,7 +49,7 @@ const Hematopathology = () => {
               <b className="mt-[10px] text-lg">
                 The international standards we have adopted include:
               </b>
-              <ul className="list-disc  mt-2 px-2">
+              <ul className="list-disc  mt-2 px-2  mb-5">
                 <li>
                   Witnessed specimen collection procedure (to ensure donor
                   specimen identity)

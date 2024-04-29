@@ -32,8 +32,8 @@ function Homesampling() {
         </div>
       </div>
 
-      <div className="container mx-auto    w-[85vw]">
-        <div className="grid grid-cols-2 gap-4">
+      <div className="container mx-auto    w-full  mdw-[85vw]">
+        <div className="grid    gridgrid-cols-2 gap-4">
           <div>
             <Formik
               validationSchema={schema}

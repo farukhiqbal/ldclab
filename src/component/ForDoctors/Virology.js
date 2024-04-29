@@ -19,7 +19,7 @@ const Virology = () => {
 
       <div className=" w-full bg-gray-100  py-[5rem]  ">
         <div className="w-[85vw]  mx-auto ">
-          <div className="grid    grid-cols-2 ">
+          <div className="grid  grid-cols-1  md:grid-cols-2 ">
             <div className=" pr-[3rem]">
               <h1 className="text-3xl py-3 text-[#2e3092]  font-bold ">
                 DEPARTMENT OF VIROLOGY

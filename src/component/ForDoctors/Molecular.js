@@ -19,7 +19,7 @@ const Molecular = () => {
 
       <div className=" w-full bg-gray-100  py-[5rem]  ">
         <div className="w-[85vw]  mx-auto ">
-          <div className="grid    grid-cols-2 ">
+          <div className="grid   grid-cols-1  md:grid-cols-2 ">
             <div className=" pr-[3rem]">
               <h1 className="text-3xl  text-[#2e3092]  font-bold ">
                 MOLECULAR GENETICS / CYTOGENETICS DEPARTMENT
@@ -49,7 +49,7 @@ const Molecular = () => {
               </ul>
 
               <p className="text-4xl   my-5 ">Technologies Used</p>
-              <ul className="list-disc  mt-2 px-2">
+              <ul className="list-disc mb-5 mt-2 px-2">
                 <li>Next Generation Sequencing (NGS)</li>
                 <li>Sangers DNA Sequencing</li>
                 <li>Real Time PCR (RT-PCR)</li>
