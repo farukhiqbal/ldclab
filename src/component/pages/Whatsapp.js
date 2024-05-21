@@ -1,14 +1,15 @@
 import React from 'react'
-import Number from '../../images/Number.jpg'
+import Number from '../../images/Number.jpeg'
 
 const Whatsapp = () => {
   return (
     <div>
-          <div className="w-full  my- bg-[#2e3093]  justify-center flex  flex-col  md:flex-row   ">
-        <div className="">
+          <div className="w-full  my- bg-[#2e3093]  justify-center flex  flex-col    py-5 md:flex-row   ">
+        <div className="  mx-auto   md:mx-0 lg:mx-0 ">
           <img
             src={Number}
             alt=""
+            className='h-[100px]'
           />
         </div>
 
