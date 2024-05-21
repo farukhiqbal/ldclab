@@ -114,7 +114,7 @@ const MultiCarousel = ({ deviceType }) => {
           {Healthimage.map((image) => (
             <div
               key={image.id}
-              className="border-black relative w-[300px] mx-auto md:w-[250px] h-[40vh]"
+              className="border-black relative w-[300px] mx-auto md:w-[250px] h-[50vh]"
             >
               <div className="w-full md:w-[245px] h-[200px]">
                 <img
