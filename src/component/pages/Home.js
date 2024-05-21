@@ -211,7 +211,7 @@ const Home = () => {
               <br />
               <p className="text-xl font-bold   text-center    ">CEO</p>
               <p className="name-heading   text-center  font-semibold  text-lg">
-                &nbsp;Dr. Ata UL Mustafa
+                &nbsp;Dr. Ata Ul Mustafa
               </p>
             </div>
           </div>
