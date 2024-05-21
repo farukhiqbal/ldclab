@@ -1,8 +1,11 @@
 import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import microbiology from '../../images/microcarosel.jpeg'
 
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import virology from '../../images/biology.jpeg';
+import biochemistry   from '../../images/biochemistry.jpeg'
 
 const responsive = {
   superLargeDesktop: {
@@ -30,13 +33,13 @@ const MultiCarousel = ({ deviceType }) => {
 
         {
           title: 'Microbiology',
-          imagesrc: 'https://chughtailab.com/wp-content/uploads/2021/01/Microbiology-1-300x187.jpg',
+          imagesrc: microbiology,
           link: '#',
           
         },
         {
           title: 'Virology',
-          imagesrc: 'https://chughtailab.com/wp-content/uploads/2021/01/Virology-1-300x187.jpg',
+          imagesrc:  virology ,
           link: '#',
         },
       
@@ -55,7 +58,7 @@ const MultiCarousel = ({ deviceType }) => {
           
           {
             title: 'Biochemistry',
-            imagesrc: 'https://chughtailab.com/wp-content/uploads/2023/03/toxicology_th.jpg',
+            imagesrc: biochemistry,
             link: '#',
           },
          
