@@ -19,6 +19,7 @@ import { useState } from "react";
 import MainFile from "./Dashboard/MainFile";
 import HealthPackages from "./component/pages/HealthPackages";
 import CartPage from "./component/pages/CartPage";
+import Frenchise from "./component/pages/Frenchise";
 
 function App() {
 
@@ -27,6 +28,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home/>}/>
           <Route  path='/home' element={<Home/>}/>
+          {/* <Route  path='/frenchise' element={<Frenchise/>}/> */}
           <Route path='/department' element={<Departments/>}/>
           <Route path='/contact' element={<Contactus/>}/>
           <Route path='/Toxicology' element={<Toxicology/>}/>

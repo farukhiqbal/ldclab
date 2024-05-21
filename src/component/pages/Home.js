@@ -92,7 +92,7 @@ const Home = () => {
                   <div className=" flex flex-wrap justify-between">
                     {/* first column */}
 
-                    <div className="w-[50%]   flex flex-col  md:flex-row">
+                    <div className="  w-[50%]  md:w-[38%]   flex flex-col  md:flex-row">
                       <div className="w-full md:w-1/2 px-4 py-5 ">
                         <Link to="#" className="block">
                           <div className="banner_bottom-item">
@@ -127,7 +127,7 @@ const Home = () => {
                       </div>
                     </div>
 
-                    <div className="flex flex-col  md:flex-row w-[50%]">
+                    <div className="flex flex-col  md:flex-row  w-[50%]   md:w-[62%]">
                       {/* third column */}
                       <div className="banner_bottom_col py-5 w-full md:w-1/2 px-4    border-l border-white">
                         <Link to="/healthPackages" className="block">
@@ -161,6 +161,30 @@ const Home = () => {
                           </div>
                         </Link>
                       </div>
+
+                           {/* column number 5 */}
+
+                      <div className="py-5 border-t  md:border-l md:border-t-0 w-full md:w-1/2 px-4 border-white">
+                        <Link to="/frenchise" className="">
+                          <div className="banner_bottom-item">
+                            <div className="banner-icon mx-auto flex items-center justify-center bg-white rounded-full w-16 h-16">
+                              <img
+                                src="https://chughtailab.com/wp-content/themes/chughtai-lab/template/images/banner_bottom_img4.webp"
+                                alt="View Reports"
+                              />
+                            </div>
+                            <div className="text-lg font-bold hover:text-[#454bff] text-white text-center mt-2">
+                              Frenchise Opportunities
+                            </div>
+                          </div>
+                        </Link>
+                      </div>
+
+
+
+
+
+
                     </div>
                   </div>
                 </div>
@@ -187,7 +211,7 @@ const Home = () => {
               <br />
               <p className="text-xl font-bold   text-center    ">CEO</p>
               <p className="name-heading   text-center  font-semibold  text-lg">
-                Dr.Atta ul Mustafa
+                Dr.Ata UL Mustafa
               </p>
             </div>
           </div>
