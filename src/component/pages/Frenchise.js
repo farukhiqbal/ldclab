@@ -3,7 +3,9 @@ import Layout from "../Layout/Layout";
 import banner from "../../images/department.webp";
 import { HiCurrencyPound } from "react-icons/hi";
 import { BsGraphUpArrow } from "react-icons/bs";
-
+import { FaPoundSign, FaChartLine } from 'react-icons/fa';
+import investment from '../../images/cost-of-kumon-franchise.png'
+import earnings from '../../images/profit+transparent.png'
 
 const Frenchise = () => {
 
@@ -11,12 +13,11 @@ const Frenchise = () => {
 
 
 
-  const [activeTab, setActiveTab] = useState('investment');
+  const [activeTab, setActiveTab] = useState('');
 
-  const showTab = (tab) => {
+  const handleTabClick = (tab) => {
     setActiveTab(tab);
   };
-
 
 
   const [formData, setFormData] = useState({
@@ -226,7 +227,7 @@ const Frenchise = () => {
     <div className="row">
       <div className="col col-sm-12">
         <div className="wysiwyg_widget    text-l   mt-5   ">
-          <h2 className="text-center font-bold  text-2xl">How much will it cost?</h2>
+          <h2 className="text-center font-[400]  text-[3rem]">How much will it cost?</h2>
           <p className="text-center text-[#666]   text-[22px]   mt-5 ">Explore the content below to learn more about the costs and rewards of owning your own Kumon centre.</p>
         </div>                              </div>
     </div>
@@ -236,93 +237,6 @@ const Frenchise = () => {
 
 
 
-
-
-<div className="row-wrapper page-builder-bg-grey">
-      <div className="container-fluid">
-        <div className="row">
-          <div className="col col-sm-12">
-            <div className="widget_cost_and_profit">
-              <div className="container-fluid">
-                <div className="row">
-                  <div className="col-sm-offset-2 top-buffer border-2 border-black">
-                    <ul className="list-none flex justify-center">
-                      <li
-                        className={`border-2 border-black ${activeTab === 'investment' ? 'active' : ''}`}
-                        onClick={() => showTab('investment')}
-                      >
-                        <a href="#kumon_centre_cost_1">
-                          <span className="currency-wrapper">
-                            <HiCurrencyPound />
-                          </span>
-                          <div>My investment</div>
-                        </a>
-                      </li>
-                      <li
-                        className={`${activeTab === 'earnings' ? 'active' : ''}`}
-                        onClick={() => showTab('earnings')}
-                      >
-                        <a href="#kumon_centre_profit_1">
-                          <span className="fa-stack fa-lg">
-                            <BsGraphUpArrow />
-                          </span>
-                          <div>My earnings</div>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-
-                <div className="row tab-content top-buffer">
-                  <div
-                    className={`tab-pane fade ${activeTab === 'investment' ? 'show active' : ''}`}
-                    id="kumon_centre_cost_1"
-                  >
-                    <div className="col col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-0 top-buffer">
-                      {/* <img src="" /> */}
-                    </div>
-                    <div className="col col-xs-12 col-sm-8 top-buffer">
-                      <ul>
-                        <br />
-                        <li>An initial investment of £3,000 towards your licence fee (representing £1,500 per subject for maths and English)</li>
-                        <br />
-                        <li>You need to budget an additional £1,500 - £2,000 for marketing activity across your first 12 months of business</li>
-                        <br />
-                        <li>You need to allow for rent or hire of premises, as well as other minimal running costs</li>
-                        <br />
-                        <li>In the case of franchise re-sales, a fee is paid to the outgoing Instructor for taking over their business</li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div
-                    className={`tab-pane fade ${activeTab === 'earnings' ? 'show active' : ''}`}
-                    id="kumon_centre_profit_1"
-                  >
-                    <div className="col col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-0 top-buffer">
-                      {/* <img src="https://www.kumon.co.uk/files/cost_and_profit_profit_images/4132/profit+transparent.png" /> */}
-                    </div>
-                    <div className="col col-xs-12 col-sm-8 top-buffer">
-                      <ul>
-                        <br />
-                        <li>You’ll set your own fees, typically in the region of £65 per subject, per month, which parents pay to you directly</li>
-                        <br />
-                        <li>You’ll be aiming to have average subject numbers of 150-200 subjects in your centre</li>
-                        <br />
-                        <li>You’ll pay Kumon a fixed cost royalty fee for each student/subject, so it’s easy to project your income</li>
-                        <br />
-                        <li>The Kumon royalty fee covers the Kumon learning materials, your ongoing training and support and much more!</li>
-                        <br />
-                        <li>You’ll benefit from generous rent and fit-out subsidies towards starting up in a dedicated venue</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
 
  
@@ -336,10 +250,84 @@ const Frenchise = () => {
 
 
 
+    <div className=" mx-auto p-4     bg-[#f8f8f8]">
+        <div className="w-[80vw] py-[2rem] mx-auto">
+
+       
+      <div className="flex justify-center   ">
+        <ul className="flex space-x-10">
+          <li
+            className={`cursor-pointer p-2 px-[3.5rem] pt-[1.8rem]  border-2  ${activeTab === 'investment' ? 'text-white bg-[#8cc242]  px-[3.5rem] pt-[1.5rem]  pb-[1rem]  border-2 block  border-[#8cc242]' : ' hover:bg-[#8cc242] hover:text-white   text-[#8cc242]   px-[3rem]  border-2  border-[#8cc242] pt-[1.5rem] pb-[1rem]  block '}`}
+            onClick={() => handleTabClick('investment')}
+          >
+            <span className="mr-2  ">
+              <FaPoundSign  className="text-center text-[1.8rem]  mx-auto    " />
+            </span>
+            <span  className="text-xl  ">My investment</span>
+
+          </li>
+          <li
+            className={`cursor-pointer p-2  px-[3.5rem] pt-[1.5rem] border-2  ${activeTab === 'earnings' ? ' text-white bg-[#8cc242]  px-[3.5rem] pt-[1.5rem]  pb-[1rem]  border-2 block  border-[#8cc242]' : '  hover:bg-[#8cc242] hover:text-white   text-[#8cc242]   px-[3rem]  border-2  border-[#8cc242] pt-[1.5rem] pb-[1rem]  block '}`}
+            onClick={() => handleTabClick('earnings')}
+          >
+            <span className="mr-2   ">
+              <FaChartLine  className="text-center text-[1.8rem]  mx-auto  "  />
+            </span>
+            <span   className="text-xl  ">My earnings</span>
+          </li>
+        </ul>
+      </div>
+
+      <div className="mt-[3rem]  w-[75vw] ">
+        {activeTab === 'investment' && (
+          <div className="flex flex-col md:flex-row items-center">
+            <div className="md:w-1/3">
+              <img
+                src={investment}
+                alt="Cost of Kumon Franchise"
+                className="w-full h-auto"
+              />
+            </div>
+            <div className="md:w-2/3  md:mt-0 md:ml-4   px-3  ">
+              <ul className="list-disc list-inside  px-[3rem] text-xl space-y-8">
+                <li>An initial investment of £3,000 towards your licence fee (representing £1,500 per subject for maths and English)</li>
+                <li>You need to budget an additional £1,500 - £2,000 for marketing activity across your first 12 months of business</li>
+                <li>You need to allow for rent or hire of premises, as well as other minimal running costs</li>
+                <li>In the case of franchise re-sales, a fee is paid to the outgoing Instructor for taking over their business</li>
+              </ul>
+            </div>
+          </div>
+        )}
+
+        {activeTab === 'earnings' && (
+          <div className="flex flex-col md:flex-row items-center">
+            <div className="md:w-1/3">
+              <img
+                src={earnings}
+                alt="Kumon Profit"
+                className="w-full h-auto"
+              />
+            </div>
+            <div className="md:w-2/3 mt-4 md:mt-0 md:ml-4">
+              <ul className="list-disc list-inside  px-[4rem]  text-xl  space-y-2">
+                <li>You’ll set your own fees, typically in the region of £65 per subject, per month, which parents pay to you directly</li>
+                <li>You’ll be aiming to have average subject numbers of 150-200 subjects in your centre</li>
+                <li>You’ll pay Kumon a fixed cost royalty fee for each student/subject, so it’s easy to project your income</li>
+                <li>The Kumon royalty fee covers the Kumon learning materials, your ongoing training and support and much more!</li>
+                <li>You’ll benefit from generous rent and fit-out subsidies towards starting up in a dedicated venue</li>
+              </ul>
+            </div>
+          </div>
+        )}
+      </div>
+    </div>
+
+    </div>
 
 
 
 
+{/* 
 
     <div className="min-h-screen flex items-center justify-center bg-gray-100 p-4">
       <div className="bg-white p-8 rounded shadow-md w-full max-w-4xl">
@@ -388,7 +376,7 @@ const Frenchise = () => {
       </div>
     </div>
 
-
+ */}
 
 
 
