@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import QRCode from 'qrcode.react';
 import Layout from '../Layout/Layout'
+import { useMediaQuery } from 'react-responsive';
 
 const FrenchiseForm = () => {
 
@@ -34,14 +35,18 @@ const FrenchiseForm = () => {
     // Handle file uploads as needed
   };
 
+
+  const isLargeScreen = useMediaQuery({ query: '(min-width: 1024px)' }); 
+  const qrCodeSize = isLargeScreen ? 100 : 50;
+
   return (
     <Layout>
 
   <div className="min-h-screen flex items-center justify-center bg-gray-100 p-4">
       <div className="bg-white p-8 rounded shadow-md w-full max-w-4xl">
         <div className="flex gap-[3rem]  mb-[3rem] items-center">
+        <QRCode value="URL_OF_YOUR_FORM" className="mb-4" size={qrCodeSize} />
 
-          <QRCode value="URL_OF_YOUR_FORM" className="mb-4  "   size={50} />
           <h2 className="       text-[1.5rem]     md:text-[2rem]     lg:text-[3rem] font-bold mb-6 text-center">Franchise Information</h2>
         </div>
         <form onSubmit={handleSubmit}>
