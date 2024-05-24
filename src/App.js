@@ -21,6 +21,7 @@ import HealthPackages from "./component/pages/HealthPackages";
 import CartPage from "./component/pages/CartPage";
 import Frenchise from "./component/pages/Frenchise";
 import FrenchiseForm from "./component/Frenchisefrom/FrenchiseForm";
+import JobsForm from "./component/JobsForm/JobsForm";
 
 function App() {
 
@@ -60,6 +61,15 @@ function App() {
     
 
       </Routes>
+
+
+
+     {/* <JobsForm/> */}
+
+
+  
+
+
 
       
     </>

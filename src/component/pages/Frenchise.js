@@ -10,6 +10,7 @@ import kumon from '../../images/kumon-instructors.jpg'
 import QRCode from 'qrcode.react';
 import FrenchiseForm from "../Frenchisefrom/FrenchiseForm";
 import { Link } from "react-router-dom";
+import JobsForm from "../JobsForm/JobsForm";
 
 
 const Frenchise = () => {
@@ -350,8 +351,7 @@ const Frenchise = () => {
 
 
 
-        
-
+    
 
 
 
