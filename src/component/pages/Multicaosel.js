@@ -100,14 +100,14 @@ const MultiCarousel = ({ deviceType }) => {
           itemClass="carousel-item-padding-40-px"
           renderButtonGroupOutside={true} // Render button group outside of carousel
           customLeftArrow={
-            <div className="absolute top-1/2 transform -translate-y-1/2 left-[-7px]">
+            <div className="absolute  transform -translate-y-1/2 left-[-7px]">
               <button className="bg-gray-300 text-black  p-3   hover:bg-[#2e3092] hover:text-white rounded-md ml-2">
                 <FaChevronLeft />
               </button>
             </div>
           } // Custom left arrow
           customRightArrow={
-            <div className="absolute top-1/2 transform -translate-y-1/2 right-0">
+            <div className="absolute  transform -translate-y-1/2 right-0">
               <button className="bg-gray-300 text-black  p-3   hover:bg-[#2e3092] hover:text-white rounded-md ml-2">
                 <FaChevronRight />
               </button>

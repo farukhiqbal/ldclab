@@ -102,7 +102,7 @@ const Home = () => {
                                 alt="Find Nearest Center"
                               />
                             </div>
-                            <div className="text-lg font-bold hover:text-[#454bff] text-white text-center mt-2">
+                            <div className="  text-md lg:text-lg font-bold hover:text-[#454bff] text-white text-center mt-2">
                               Find Nearest Center
                             </div>
                           </div>
@@ -124,7 +124,7 @@ const Home = () => {
                                 alt="Book Home Sampling"
                               />
                             </div>
-                            <div className="text-lg font-bold hover:text-[#454bff] text-white text-center mt-2">
+                            <div className="   text-md lg:text-lg font-bold hover:text-[#454bff] text-white text-center mt-2">
                               Panel Registration
                             </div>
                           </div>
@@ -141,7 +141,7 @@ const Home = () => {
                                 alt="Book Home Sampling"
                               />
                             </div>
-                            <div className="text-lg font-bold hover:text-[#454bff] text-white text-center mt-2">
+                            <div className="    text-md lg:text-lg font-bold hover:text-[#454bff] text-white text-center mt-2">
                               Book Home Sampling
                             </div>
                           </div>
@@ -173,7 +173,7 @@ const Home = () => {
                                 alt="Get Teleconsultation"
                               />
                             </div>
-                            <div className="text-lg font-bold hover:text-[#454bff] text-white text-center mt-2">
+                            <div className="   text-md  lg:text-lg font-bold hover:text-[#454bff] text-white text-center mt-2">
                               Health Packages
                             </div>
                           </div>
@@ -190,7 +190,7 @@ const Home = () => {
                                 alt="View Reports"
                               />
                             </div>
-                            <div className="text-lg font-bold hover:text-[#454bff] text-white text-center mt-2">
+                            <div className="  text-md  lg:text-lg font-bold hover:text-[#454bff] text-white text-center mt-2">
                               View Reports
                             </div>
                           </div>
@@ -208,7 +208,7 @@ const Home = () => {
                                 alt="View Reports"
                               />
                             </div>
-                            <div className="text-lg font-bold hover:text-[#454bff] text-white text-center mt-2">
+                            <div className="   text-md   lg:text-lg font-bold hover:text-[#454bff] text-white text-center mt-2">
                               Frenchise Opportunities
                             </div>
                           </div>
