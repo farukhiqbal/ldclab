@@ -20,6 +20,7 @@ import MainFile from "./Dashboard/MainFile";
 import HealthPackages from "./component/pages/HealthPackages";
 import CartPage from "./component/pages/CartPage";
 import Frenchise from "./component/pages/Frenchise";
+import FrenchiseForm from "./component/Frenchisefrom/FrenchiseForm";
 
 function App() {
 
@@ -43,7 +44,8 @@ function App() {
           <Route path='/register' element={<Signup/>}/>
           <Route path='/homeSampling' element={<Homesampling/>}/>
           <Route path='/healthPackages' element={<HealthPackages/>}/>
-          <Route path='/Cartpage/:id' element={<CartPage/>}/> */}
+          <Route path='/Cartpage/:id' element={<CartPage/>}/> 
+          <Route path='/frenchisefrom' element={<FrenchiseForm/>}/> 
 
 
           {/* <Route  path='/' element={<MainFile/>}/> */}

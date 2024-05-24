@@ -8,7 +8,8 @@ import investment from '../../images/cost-of-kumon-franchise.png'
 import earnings from '../../images/profit+transparent.png'
 import kumon from '../../images/kumon-instructors.jpg'
 import QRCode from 'qrcode.react';
-
+import FrenchiseForm from "../Frenchisefrom/FrenchiseForm";
+import { Link } from "react-router-dom";
 
 
 const Frenchise = () => {
@@ -22,39 +23,6 @@ const Frenchise = () => {
   const handleTabClick = (tab) => {
     setActiveTab(tab);
   };
-
-
-
-
-  const [formData, setFormData] = useState({
-    name: '',
-    address: '',
-    phone: '',
-    city: '',
-    cnic: '',
-    franchiseLocation: '',
-    franchiseCity: '',
-    franchiseArea: '',
-    expectedRent: '',
-    franchiseImage: null,
-  });
-  
-  const [formErrors, setFormErrors] = useState({});
-
-  const handleChange = (e) => {
-    const { name, value, type, files } = e.target;
-    setFormData({
-      ...formData,
-      [name]: type === 'file' ? files[0] : value,
-    });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Validate and submit the form data
-    // Handle file uploads as needed
-  };
-
 
 
 
@@ -366,9 +334,9 @@ const Frenchise = () => {
             &nbsp;
             
             
-            <div className="inline-block px-6 py-2 mt-4    my-[2rem] text-white bg-green-500 hover:bg-green-600 rounded">
-                  See History of Kumon <i className="fa fa-chevron-right" />
-                </div>
+            <Link to='/frenchisefrom'     className="inline-block px-6 py-2 mt-4    my-[2rem] text-white bg-green-500 hover:bg-green-600 rounded">
+                  Register Now <i className="fa fa-chevron-right" />
+                </Link>
             
             </p>
         </div>                              </div>
@@ -382,60 +350,7 @@ const Frenchise = () => {
 
 
 
-
-
-
-
-
-
-<div className="min-h-screen flex items-center justify-center bg-gray-100 p-4">
-      <div className="bg-white p-8 rounded shadow-md w-full max-w-4xl">
-      <QRCode value="URL_OF_YOUR_FORM" className="mb-4" />
-        <h2 className="text-2xl font-bold mb-6 text-center">Franchise Information</h2>
-        <form onSubmit={handleSubmit}>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            {[
-              { label: 'Name', name: 'name', type: 'text' },
-              { label: 'Address', name: 'address', type: 'text' },
-              { label: 'Phone', name: 'phone', type: 'tel' },
-              { label: 'City', name: 'city', type: 'text' },
-              { label: 'CNIC', name: 'cnic', type: 'text' },
-              { label: 'Location of Franchise', name: 'franchiseLocation', type: 'text' },
-              { label: 'City of Franchise', name: 'franchiseCity', type: 'text' },
-              { label: 'Area of Franchise', name: 'franchiseArea', type: 'text' },
-              { label: 'Expected Rent of Franchise', name: 'expectedRent', type: 'number' },
-              { label: 'Image', name: 'franchiseImage', type: 'file' }
-            ].map((field, index) => (
-              <div key={index} className="mb-4">
-                <label htmlFor={field.name} className="block text-gray-700 font-bold mb-2">
-                  {field.label}
-                </label>
-                <input
-                  id={field.name}
-                  name={field.name}
-                  type={field.type}
-                  value={field.type !== 'file' ? formData[field.name] : undefined}
-                  onChange={handleChange}
-                  className={`w-full px-3 py-2 border ${formErrors[field.name] ? 'border-red-500' : 'border-gray-300'} rounded`}
-                  aria-describedby={field.name + "Help"}
-                />
-                {formErrors[field.name] && (
-                  <p className="text-red-500 text-xs italic" id={field.name + "Help"}>
-                    {formErrors[field.name]}
-                  </p>
-                )}
-              </div>
-            ))}
-          </div>
-          <button
-            type="submit"
-            className="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-700 transition duration-200 mt-4"
-          >
-            Submit
-          </button>
-        </form>
-      </div>
-    </div>
+        
 
 
 
