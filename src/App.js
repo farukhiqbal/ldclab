@@ -43,13 +43,15 @@ function App() {
           <Route path='/register' element={<Signup/>}/>
           <Route path='/homeSampling' element={<Homesampling/>}/>
           <Route path='/healthPackages' element={<HealthPackages/>}/>
-          <Route path='/Cartpage/:id' element={<CartPage/>}/>
+          <Route path='/Cartpage/:id' element={<CartPage/>}/> */}
 
 
-          {/* <Route  path='/' element={<MainFile/>}/>
-          <Route  path='/maindashboard' element={<MainFile/>}/> */}
+          {/* <Route  path='/' element={<MainFile/>}/> */}
 
-          
+
+          {/* <Route  path='/maindashboard' element={<MainFile/>}/>
+
+            {/* <Dashboard/> */}
 
 
           

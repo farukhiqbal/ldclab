@@ -7,6 +7,7 @@ import { FaPoundSign, FaChartLine } from 'react-icons/fa';
 import investment from '../../images/cost-of-kumon-franchise.png'
 import earnings from '../../images/profit+transparent.png'
 import kumon from '../../images/kumon-instructors.jpg'
+import QRCode from 'qrcode.react';
 
 
 
@@ -23,6 +24,8 @@ const Frenchise = () => {
   };
 
 
+
+
   const [formData, setFormData] = useState({
     name: '',
     address: '',
@@ -32,39 +35,27 @@ const Frenchise = () => {
     franchiseLocation: '',
     franchiseCity: '',
     franchiseArea: '',
-    expectedRent: ''
+    expectedRent: '',
+    franchiseImage: null,
   });
-
+  
   const [formErrors, setFormErrors] = useState({});
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    let errors = { ...formErrors };
-
-    // Check for phone and CNIC length and numeric value
-    if (name === 'phone' || name === 'cnic') {
-      if (value.length !== 11 || !/^\d+$/.test(value)) {
-        errors[name] = 'Must be exactly 11 digits';
-      } else {
-        delete errors[name];
-      }
-    }
-
-    setFormData({ ...formData, [name]: value });
-    setFormErrors(errors);
+    const { name, value, type, files } = e.target;
+    setFormData({
+      ...formData,
+      [name]: type === 'file' ? files[0] : value,
+    });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    // Make sure there are no errors before submitting
-    if (Object.keys(formErrors).length === 11 && formData.phone.length === 11 && formData.cnic.length === 11) {
-      console.log(formData);
-      alert('Form submitted successfully!');
-    } else {
-      alert('Please fix the errors before submitting.');
-    }
+    // Validate and submit the form data
+    // Handle file uploads as needed
   };
+
+
 
 
   return (
@@ -397,11 +388,9 @@ const Frenchise = () => {
 
 
 
-
-{/* 
-
-    <div className="min-h-screen flex items-center justify-center bg-gray-100 p-4">
+<div className="min-h-screen flex items-center justify-center bg-gray-100 p-4">
       <div className="bg-white p-8 rounded shadow-md w-full max-w-4xl">
+      <QRCode value="URL_OF_YOUR_FORM" className="mb-4" />
         <h2 className="text-2xl font-bold mb-6 text-center">Franchise Information</h2>
         <form onSubmit={handleSubmit}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -414,7 +403,8 @@ const Frenchise = () => {
               { label: 'Location of Franchise', name: 'franchiseLocation', type: 'text' },
               { label: 'City of Franchise', name: 'franchiseCity', type: 'text' },
               { label: 'Area of Franchise', name: 'franchiseArea', type: 'text' },
-              { label: 'Expected Rent of Franchise', name: 'expectedRent', type: 'number' }
+              { label: 'Expected Rent of Franchise', name: 'expectedRent', type: 'number' },
+              { label: 'Image', name: 'franchiseImage', type: 'file' }
             ].map((field, index) => (
               <div key={index} className="mb-4">
                 <label htmlFor={field.name} className="block text-gray-700 font-bold mb-2">
@@ -424,7 +414,7 @@ const Frenchise = () => {
                   id={field.name}
                   name={field.name}
                   type={field.type}
-                  value={formData[field.name]}
+                  value={field.type !== 'file' ? formData[field.name] : undefined}
                   onChange={handleChange}
                   className={`w-full px-3 py-2 border ${formErrors[field.name] ? 'border-red-500' : 'border-gray-300'} rounded`}
                   aria-describedby={field.name + "Help"}
@@ -447,7 +437,6 @@ const Frenchise = () => {
       </div>
     </div>
 
- */}
 
 
 
