@@ -61,7 +61,7 @@ const FrenchiseForm = () => {
               { label: 'City of Franchise', name: 'franchiseCity', type: 'text' },
               { label: 'Area of Franchise', name: 'franchiseArea', type: 'text' },
               { label: 'Expected Rent of Franchise', name: 'expectedRent', type: 'number' },
-              { label: 'Franchise Honour Image', name: 'franchiseImage', type: 'file' }
+              { label: 'Franchisee Image', name: 'franchiseImage', type: 'file' }
             ].map((field, index) => (
               <div key={index} className="mb-4">
                 <label htmlFor={field.name} className="block text-gray-700 font-bold mb-2">

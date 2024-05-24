@@ -29,6 +29,28 @@ const Frenchise = () => {
 
   return (
     <Layout>
+
+
+<Link
+  to='/frenchisefrom'
+  className="fixed top-[6.5rem] left-1/2 transform -translate-x-1/2 px-6 py-2 text-white bg-green-500 hover:bg-green-600 rounded shadow-lg transition duration-200 ease-in-out hover:scale-105 z-50"
+>
+  Register Now <i className="fa fa-chevron-right" />
+</Link>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       <div className="relative   w-full  ">
         <img
           src={banner}
