@@ -28,7 +28,7 @@ function App() {
 
   return (
     <>
-      {/* <Routes>
+      <Routes>
         <Route path='/' element={<Home/>}/>
           <Route  path='/home' element={<Home/>}/>
           <Route  path='/frenchise' element={<Frenchise/>}/>
@@ -47,13 +47,13 @@ function App() {
           <Route path='/homeSampling' element={<Homesampling/>}/>
           <Route path='/healthPackages' element={<HealthPackages/>}/>
           <Route path='/Cartpage/:id' element={<CartPage/>}/> 
-          <Route path='/frenchisefrom' element={<FrenchiseForm/>}/>  */}
+          <Route path='/frenchisefrom' element={<FrenchiseForm/>}/> 
 
 
           {/* <Route  path='/' element={<MainFile/>}/> */}
 
 
-          {/* <Route  path='/maindashboard' element={<MainFile/>}/>
+           {/* <Route  path='/maindashboard' element={<MainFile/>}/> */}
 
             
 
@@ -61,7 +61,7 @@ function App() {
           
     
 
-      {/* </Routes> */}
+        </Routes>
 
 
 
@@ -70,8 +70,8 @@ function App() {
 
   
 
-       <GetFranchise/>
-     <Dashboard/>
+       {/* <GetFranchise/>
+     <Dashboard/> */}
       
     </>
   );
