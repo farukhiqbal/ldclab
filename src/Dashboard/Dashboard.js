@@ -20,7 +20,7 @@ const EcommerceDashboard = () => {
     <Layout style={{ minHeight: "100vh" }}>
       <Sider trigger={null} collapsible collapsed={collapsed}>
         <div className="logo" style={{ height: "32px", margin: "16px" }}>
-          <h1 style={{ color: "white" }}> Dashboard</h1>
+          <h1 style={{ color: "white" }}>ldc lab Dashboard</h1>
         </div>
         <Menu theme="dark" mode="inline" defaultSelectedKeys={["1"]}>
           <Menu.Item key="1" icon={<FaUserCircle />}>
@@ -44,9 +44,9 @@ const EcommerceDashboard = () => {
         </Menu>
       </Sider>
       <Layout className="site-layout">
-        <Header className="header" style={{ padding: 0 }}>
+        <Header className="header   text-[1.5rem] text-white " style={{ padding: 0 }}>
           {React.createElement(
-            collapsed ? MenuUnfoldOutlined : MenuFoldOutlined,
+            collapsed ? MenuUnfoldOutlined  : MenuFoldOutlined,
             {
               className: "trigger",
               onClick: toggleCollapsed,
@@ -54,12 +54,21 @@ const EcommerceDashboard = () => {
           )}
         </Header>
         <Content style={{ margin: "16px" }}>
+
+
+          
           <div
             className="site-layout-background"
             style={{ padding: 24, minHeight: 360 }}
           >
             <Outlet />
           </div>
+
+
+
+
+
+
         </Content>
       </Layout>
       <ToastContainer />

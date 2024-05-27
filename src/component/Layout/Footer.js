@@ -19,7 +19,7 @@ const Footer = () => {
     <div>
       <section className="bg-gray-300 text-black  border-t-2  border-[#2e3092]  ">
         <div className="w-full">
-          <div className="  grid   grid-cols-1  mx-8     md:grid-cols-3  lg:grid-cols-4    md:w-[85%]  md:mx-auto ">
+          <div className="  grid   grid-cols-1  mx-8     md:grid-cols-2  lg:grid-cols-3  xl:grid-cols-4  md:w-[85%]  md:mx-auto ">
             {/* Content Column */}
             <div className="mt-[4rem]   grid-cols-1  w-full  ">
               <div>

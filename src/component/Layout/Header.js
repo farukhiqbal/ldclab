@@ -104,12 +104,13 @@ const Header = () => {
     },
 
     { text: "Contact Us", url: "/contact" },
+    { text: "Login ", url: "/login" },
   ];
 
   return (
     <>
-      <div className="  flex   justify-center  lg:justify-between  bg-[#8cc242]">
-        <div className=" hidden           lg:flex pt-[5px] text-md font-[500]    md:ml-0   md:pr-[1rem] lg:ml-4      lg:pr-[2rem] h-[40px] text-white   md:gap-x-[10px]  lg:gap-x-[20px]">
+      <div className="  flex   justify-center   lg:justify-between   xl:justify-between  bg-[#8cc242]">
+        <div className=" hidden           lg:flex pt-[5px] text-md font-[500]    md:ml-0   md:pr-[1rem]      xl:ml-4      lg:pr-[2rem] h-[40px] text-white   md:gap-x-[10px]  lg:gap-x-[20px]">
           <Link
             to="#"
             className=" no-underline   ml-[6rem]     md:ml-[1rem]     lg:ml-[4.2rem] flex text-white cursor-pointer hover:text-[#2e3092] hover:text-underline"
@@ -134,7 +135,8 @@ const Header = () => {
           </Link>
         </div>
 
-        <div className="flex     sm:hidden  md:flex  text-[18px] font-[600] py-2 pr-1  md:pr-[1rem]   lg:pr-[11rem] bg-[#8cc242] h-[40px] text-white justify-center md:justify-end lg:justify-end sm:gap-x-[10px] gap-x-[10px]  md:gap-x-[10px]">
+        <div className="flex       md:flex  text-[17px] font-[600] py-2 pr-1  md:pr-[1rem]   lg:mr-[5rem] xl:mr-[9rem]
+         bg-[#8cc242] h-[40px] text-white justify-center md:justify-end    lg:justify-end   xl:justify-end sm:gap-x-[10px] gap-x-[10px]  md:gap-x-[10px]">
           <Link
             to="/login"
             className=" no-underline text-white cursor-pointer hover:text-[#2e3092] hover:text-underline"
@@ -161,12 +163,12 @@ const Header = () => {
               {/* bars  */}
               <button
                 onClick={handleNav}
-                className=" absolute   top-[.8rem]  lg:top-[2.2rem] flex    right-4  md:right-[8em]  justify-right   px-2 p-2 text-xl font-medium text-black"
+                className=" absolute   top-[.8rem]        md:top-[1.8rem]      lg:top-[2.2rem] flex    right-4  md:right-[8em]  justify-right   px-2 p-2 text-xl font-medium text-black"
               >
                 <FaBarsStaggered className="text-[1.6rem]" />
               </button>
 
-              <div className="absolute  hidden lg:flex    w-[28rem] shadow-lg   justify-between border-2 rounded-lg mt-8    md:ml-[10rem]  lg:ml-[35rem]">
+              <div className="absolute  hidden        xl:flex    w-[28rem] shadow-lg   justify-between border-2 rounded-lg mt-8    md:ml-[10rem]  lg:ml-[35rem]">
                 {/* <div className=""> */}
 
                 <div className="  w-[23rem] ">
@@ -186,7 +188,7 @@ const Header = () => {
               <CartPage />
             </div>
 
-            <div className="flex  items-center h-full w-full ml-0  md:ml-[0.8rem] lg:ml-[3rem]">
+            <div className="flex  items-center h-full w-full ml-0  md:ml-[0.8rem]  lg:ml-[1.6rem]  xl:ml-[3rem]">
               <Link to="/" onClick={handleLinkClick}>
                 <img
                   className="        h-[60px]  md:h-[100px]   w-[170px]   md:w-[250px]   lg:w-[250px] "

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import QRCode from 'qrcode.react';
 import { useMediaQuery } from 'react-responsive';
 
-const FranchiseForm = () => {
+const JobsForm = () => {
   const [formData, setFormData] = useState({
     name: '',
     address: '',
@@ -11,7 +11,7 @@ const FranchiseForm = () => {
     city: '',
     cnic: '',
     appliedPosition: '',
-    academicRecord: '',
+    academicRecord: [''], // Start with one empty row
     experience: '',
     relevantExperience: '',
     profileImage: null,
@@ -20,10 +20,23 @@ const FranchiseForm = () => {
   const [formErrors, setFormErrors] = useState({});
 
   const handleChange = (e) => {
-    const { name, value, type, files } = e.target;
+    const { name, value, type, files, dataset } = e.target;
+    if (name === 'academicRecord') {
+      const newAcademicRecord = [...formData.academicRecord];
+      newAcademicRecord[dataset.index] = value;
+      setFormData({ ...formData, academicRecord: newAcademicRecord });
+    } else {
+      setFormData({
+        ...formData,
+        [name]: type === 'file' ? files[0] : value,
+      });
+    }
+  };
+
+  const handleAddAcademicRecordRow = () => {
     setFormData({
       ...formData,
-      [name]: type === 'file' ? files[0] : value,
+      academicRecord: [...formData.academicRecord, ''], // Add an empty string for a new row
     });
   };
 
@@ -53,23 +66,29 @@ const FranchiseForm = () => {
               { label: 'City', name: 'city', type: 'text' },
               { label: 'CNIC', name: 'cnic', type: 'number', maxLength: 13 },
               { label: 'Applied Position', name: 'appliedPosition', type: 'text' },
-              { label: 'Academic Record', name: 'academicRecord', type: 'text' },
+              ...formData.academicRecord.map((record, index) => ({
+                label: `Academic Record ${index + 1}`, // Dynamic label
+                name: 'academicRecord', // All rows have the same name
+                type: 'text',
+                index, // Index to identify the row
+              })),
               { label: 'Experience', name: 'experience', type: 'text' },
               { label: 'Relevant Experience', name: 'relevantExperience', type: 'text' },
               { label: 'Uploads Image', name: 'profileImage', type: 'file' }
             ].map((field, index) => (
               <div key={index} className="mb-4">
-                <label htmlFor={field.name} className="block text-gray-700 font-bold mb-2">
+                <label htmlFor={field.name + (field.index !== undefined ? `_${field.index}` : '')} className="block text-gray-700 font-bold mb-2">
                   {field.label}
                 </label>
                 <input
                   required
-                  id={field.name}
+                  id={field.name + (field.index !== undefined ? `_${field.index}` : '')}
                   name={field.name}
                   type={field.type}
                   maxLength={field.maxLength}
-                  value={field.type !== 'file' ? formData[field.name] : undefined}
+                  value={field.name === 'academicRecord' ? formData.academicRecord[field.index] : formData[field.name]}
                   onChange={handleChange}
+                  data-index={field.index !== undefined ? field.index : ''}
                   className={`w-full px-3 py-2 border ${formErrors[field.name] ? 'border-red-500' : 'border-gray-300'} rounded`}
                   aria-describedby={field.name + "Help"}
                 />
@@ -77,6 +96,11 @@ const FranchiseForm = () => {
                   <p className="text-red-500 text-xs italic" id={field.name + "Help"}>
                     {formErrors[field.name]}
                   </p>
+                )}
+                {field.name === 'academicRecord' && index === formData.academicRecord.length - 1 && (
+                  <button type="button" onClick={handleAddAcademicRecordRow} className="mt-2 text-blue-500 hover:underline focus:outline-none">
+                    Add Academic Record
+                  </button>
                 )}
               </div>
             ))}
@@ -93,4 +117,4 @@ const FranchiseForm = () => {
   );
 };
 
-export default FranchiseForm;
+export default JobsForm;

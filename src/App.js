@@ -22,12 +22,13 @@ import CartPage from "./component/pages/CartPage";
 import Frenchise from "./component/pages/Frenchise";
 import FrenchiseForm from "./component/Frenchisefrom/FrenchiseForm";
 import JobsForm from "./component/JobsForm/JobsForm";
+import GetFranchise from "./Dashboard/GetFranchise";
 
 function App() {
 
   return (
     <>
-      <Routes>
+      {/* <Routes>
         <Route path='/' element={<Home/>}/>
           <Route  path='/home' element={<Home/>}/>
           <Route  path='/frenchise' element={<Frenchise/>}/>
@@ -46,7 +47,7 @@ function App() {
           <Route path='/homeSampling' element={<Homesampling/>}/>
           <Route path='/healthPackages' element={<HealthPackages/>}/>
           <Route path='/Cartpage/:id' element={<CartPage/>}/> 
-          <Route path='/frenchisefrom' element={<FrenchiseForm/>}/> 
+          <Route path='/frenchisefrom' element={<FrenchiseForm/>}/>  */}
 
 
           {/* <Route  path='/' element={<MainFile/>}/> */}
@@ -54,13 +55,13 @@ function App() {
 
           {/* <Route  path='/maindashboard' element={<MainFile/>}/>
 
-            {/* <Dashboard/> */}
+            
 
 
           
     
 
-      </Routes>
+      {/* </Routes> */}
 
 
 
@@ -69,8 +70,8 @@ function App() {
 
   
 
-
-
+       <GetFranchise/>
+     <Dashboard/>
       
     </>
   );
