@@ -16,19 +16,26 @@ import Signup from "./component/Login&Sign/Signup";
 import Sidebar from "./Dashboard/Sidebar";
 import Dashboard from "./Dashboard/Dashboard";
 import { useState } from "react";
-import MainFile from "./Dashboard/MainFile";
 import HealthPackages from "./component/pages/HealthPackages";
 import CartPage from "./component/pages/CartPage";
 import Frenchise from "./component/pages/Frenchise";
 import FrenchiseForm from "./component/Frenchisefrom/FrenchiseForm";
 import JobsForm from "./component/JobsForm/JobsForm";
 import GetFranchise from "./Dashboard/GetFranchise";
+import GetAllTests from "./Dashboard/GetAllTests";
+import MainDashboard from "./Dashboard/MainDashboard";
+import Whatsappchat from "./component/pages/WhatsappChat";
 
 function App() {
 
   return (
     <>
+       
+      <Whatsappchat/>
       <Routes>
+
+
+
         <Route path='/' element={<Home/>}/>
           <Route  path='/home' element={<Home/>}/>
           <Route  path='/frenchise' element={<Frenchise/>}/>
@@ -53,7 +60,12 @@ function App() {
           {/* <Route  path='/' element={<MainFile/>}/> */}
 
 
-           {/* <Route  path='/maindashboard' element={<MainFile/>}/> */}
+           <Route  path='/' element={<Dashboard/>}>
+
+           <Route  path='dashboard/maindashboard' element={<MainDashboard/>}/>
+           <Route  path='dashboard/frenchise' element={<GetFranchise/>}/>
+           <Route  path='dashboard/tests' element={<GetAllTests/>}/>
+           </Route>
 
             
 
@@ -63,15 +75,14 @@ function App() {
 
         </Routes>
 
-
+        
 
      {/* <JobsForm/> */}
 
 
   
 
-       {/* <GetFranchise/>
-     <Dashboard/> */}
+ 
       
     </>
   );

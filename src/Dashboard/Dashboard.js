@@ -6,10 +6,11 @@ import { IoIosNotifications } from "react-icons/io";
 import { FaUserCircle } from "react-icons/fa";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { Link } from "react-router-dom";
 
 const { Header, Sider, Content } = Layout;
 
-const EcommerceDashboard = () => {
+const Dashboard = () => {
   const [collapsed, setCollapsed] = useState(false);
 
   const toggleCollapsed = () => {
@@ -18,19 +19,19 @@ const EcommerceDashboard = () => {
 
   return (
     <Layout style={{ minHeight: "100vh" }}>
-      <Sider trigger={null} collapsible collapsed={collapsed}>
+      <Sider trigger={null} collapsible collapsed={collapsed}    >
         <div className="logo" style={{ height: "32px", margin: "16px" }}>
           <h1 style={{ color: "white" }}>ldc lab Dashboard</h1>
         </div>
         <Menu theme="dark" mode="inline" defaultSelectedKeys={["1"]}>
           <Menu.Item key="1" icon={<FaUserCircle />}>
-            Profile
+          <Link to="dashboard/maindashboard">Dashboard</Link>
           </Menu.Item>
           <Menu.Item key="2" icon={<IoIosNotifications />}>
-            Notifications
+              <Link to='dashboard/frenchise'   >Frenchise</Link>
           </Menu.Item>
           <Menu.Item key="3" icon={<FaUserCircle />}>
-            Users
+          <Link to="dashboard/tests">Tests</Link>
           </Menu.Item>
           <Menu.Item key="4" icon={<FaUserCircle />}>
             Products
@@ -44,7 +45,7 @@ const EcommerceDashboard = () => {
         </Menu>
       </Sider>
       <Layout className="site-layout">
-        <Header className="header   text-[1.5rem] text-white " style={{ padding: 0 }}>
+        <Header className="header   text-[1.5rem] text-white  " style={{ padding: 0 }}>
           {React.createElement(
             collapsed ? MenuUnfoldOutlined  : MenuFoldOutlined,
             {
@@ -60,7 +61,7 @@ const EcommerceDashboard = () => {
           <div
             className="site-layout-background"
             style={{ padding: 24, minHeight: 360 }}
-          >
+          > 
             <Outlet />
           </div>
 
@@ -76,4 +77,4 @@ const EcommerceDashboard = () => {
   );
 };
 
-export default EcommerceDashboard;
+export default Dashboard;

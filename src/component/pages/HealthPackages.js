@@ -24,6 +24,7 @@ const HealthPackages = () => {
       <section className=" mt-[5rem] w-full ">
         <div className=" mx-auto   my-[5rem]  md:my-[3rem]  w-[82vw]">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          
             <div className="health-left ">
               <div className="  border-2  shadow-lg rounded-lg    w-full md:w-[80%]">
                 <form className="search-input ng-pristine ng-valid">
