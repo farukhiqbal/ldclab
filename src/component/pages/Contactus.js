@@ -66,7 +66,7 @@ const Contactus = () => {
           <p className=" text-center text-[16px]  px-[3rem] mt-8  md:text-center">
             We always feel delighted when anyone wants to talk to us. Feel free
             to call us or email us with any inquires you may have regarding our
-            fire safety products or services. Please allow up to 24 hours for a
+            laboratory  services. Please allow up to 24 hours for a
             response. Your patience is greatly appreciated.
           </p>
         </div>

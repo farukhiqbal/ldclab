@@ -72,12 +72,14 @@ const Home = () => {
         }}
       >
         {images.map((image, i) => (
+          
           <img
             src={image.img}
             alt={`img-${i}`}
             key={i}
-            className="banner_img h-[40vh] md:h-[70vh]"
+            className="banner_img h-[40vh] md:h-[70vh]   "
           />
+
         ))}
       </Carousel>
 
@@ -274,7 +276,7 @@ const Home = () => {
       <div className="mb-[5rem]">{/* <Blog /> */}</div>
 
       {/* =====================part 4 ======================== */}
-      <Whatsapp />
+      {/* <Whatsapp /> */}
     </Layout>
   );
 };

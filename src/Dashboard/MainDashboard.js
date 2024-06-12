@@ -83,92 +83,111 @@ const MainDashboard = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-3 mt-5">
-        <div className="col-span-2">
-          {franchiseLoading ? (
-            <div>Loading...</div>
-          ) : franchiseError ? (
-            <div>{franchiseError}</div>
-          ) : (
-            <div className="flex flex-col items-center justify-center bg-gray-100 p-4">
-              <div className="bg-white p-8 rounded shadow-md w-full">
-                <h2 className="text-2xl font-bold mb-6 text-center">Franchise List</h2>
-                <table className="w-full bg-white border">
-                  <thead>
-                    <tr>
-                      <th className="py-2 px-4 border-2 border-black">Name</th>
-                      <th className="py-2 px-4 border-2 border-black">Address</th>
-                      <th className="py-2 px-4 border-2 border-black">Email</th>
-                      <th className="py-2 px-4 border-2 border-black">Phone</th>
-                      <th className="py-2 px-4 border-2 border-black">City</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {currentFranchiseData.map((franchise) => (
-                      <tr key={franchise._id}>
-                        <td className="py-2 px-4 border-2 border-black">{franchise.name}</td>
-                        <td className="py-2 px-4 border-2 border-black">{franchise.address}</td>
-                        <td className="py-2 px-4 border-2 border-black">{franchise.email}</td>
-                        <td className="py-2 px-4 border-2 border-black">{franchise.phone}</td>
-                        <td className="py-2 px-4 border-2 border-black">{franchise.city}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-                <div className="flex justify-center mt-4">
-                  <Pagination
-                    count={Math.ceil(franchises.length / franchiseRecordsPerPage)}
-                    page={franchisePage}
-                    onChange={handleFranchisePageChange}
-                    color="primary"
-                  />
-                </div>
-              </div>
-            </div>
-          )}
+
+
+
+      <div className="grid w-full grid-cols-1 lg:grid-cols-3 mt-5">
+
+<div className="col-span-2">
+  {franchiseLoading ? (
+    <div>Loading...</div>
+  ) : franchiseError ? (
+    <div>{franchiseError}</div>
+  ) : (
+    <div className="flex flex-col items-center justify-center bg-gray-100 p-0 md:p-4">
+      <div className="bg-white p-8 rounded shadow-md w-full">
+        <h2 className="text-2xl font-bold mb-6 text-center">Franchise List</h2>
+        <div className="overflow-x-auto">
+          <table className="w-full bg-white border">
+            <thead>
+              <tr>
+                <th className="py-2 px-4 border-2 border-black">Name</th>
+                <th className="py-2 px-4 border-2 border-black">Address</th>
+                <th className="py-2 px-4 border-2 border-black">Email</th>
+                <th className="py-2 px-4 border-2 border-black">Phone</th>
+                <th className="py-2 px-4 border-2 border-black">City</th>
+              </tr>
+            </thead>
+            <tbody>
+              {currentFranchiseData
+                .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
+                .map((franchise) => (
+                  <tr key={franchise._id}>
+                    <td className="py-2 px-4 border-2 border-black">{franchise.name}</td>
+                    <td className="py-2 px-4 border-2 border-black">{franchise.address}</td>
+                    <td className="py-2 px-4 border-2 border-black">{franchise.email}</td>
+                    <td className="py-2 px-4 border-2 border-black">{franchise.phone}</td>
+                    <td className="py-2 px-4 border-2 border-black">{franchise.city}</td>
+                  </tr>
+                ))}
+            </tbody>
+          </table>
         </div>
-        <div className="col-span-1">
-          {userLoading ? (
-            <div>Loading...</div>
-          ) : userError ? (
-            <div>{userError}</div>
-          ) : (
-            <div className="flex flex-col items-center justify-center bg-gray-100 mt-4">
-              <div className="bg-white p-8 rounded shadow-md w-full">
-                <h2 className="text-2xl font-bold mb-6 text-center">User List</h2>
-                <table className="w-full bg-white border">
-                  <thead>
-                    <tr>
-                      <th className="py-2 px-4 border-2 border-black">Name</th>
-                      <th className="py-2 px-4 border-2 border-black">Email</th>
-                      <th className="py-2 px-4 border-2 border-black">Phone</th>
-                      {/* <th className="py-2 px-4 border-2 border-black">Address</th> */}
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {currentUserData.map((user) => (
-                      <tr key={user._id}>
-                        <td className="py-2 px-4 border-2 border-black">{user.name}</td>
-                        <td className="py-2 px-4 border-2 border-black">{user.email}</td>
-                        <td className="py-2 px-4 border-2 border-black">{user.phone}</td>
-                        {/* <td className="py-2 px-4 border-2 border-black">{user.address}</td> */}
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-                <div className="flex justify-center mt-4">
-                  <Pagination
-                    count={Math.ceil(users.length / userRecordsPerPage)}
-                    page={userPage}
-                    onChange={handleUserPageChange}
-                    color="primary"
-                  />
-                </div>
-              </div>
-            </div>
-          )}
+        <div className="flex justify-center mt-4">
+          <Pagination
+            count={Math.ceil(franchises.length / franchiseRecordsPerPage)}
+            page={franchisePage}
+            onChange={handleFranchisePageChange}
+            color="primary"
+          />
         </div>
       </div>
+    </div>
+  )}
+</div>
+
+<div className="col-span-1">
+  {userLoading ? (
+    <div>Loading...</div>
+  ) : userError ? (
+    <div>{userError}</div>
+  ) : (
+    <div className="flex flex-col items-center justify-center bg-gray-100 mt-4">
+      <div className="bg-white p-8 rounded shadow-md w-full">
+        <h2 className="text-2xl font-bold mb-6 text-center">User List</h2>
+        <div className="overflow-x-auto">
+          <table className="w-full bg-white border">
+            <thead>
+              <tr>
+                <th className="py-2 px-4 border-2 border-black">Name</th>
+                <th className="py-2 px-4 border-2 border-black">Email</th>
+                <th className="py-2 px-4 border-2 border-black">Phone</th>
+                {/* <th className="py-2 px-4 border-2 border-black">Address</th> */}
+              </tr>
+            </thead>
+            <tbody>
+              {currentUserData.map((user) => (
+                <tr key={user._id}>
+                  <td className="py-2 px-4 border-2 border-black">{user.name}</td>
+                  <td className="py-2 px-4 border-2 border-black">{user.email}</td>
+                  <td className="py-2 px-4 border-2 border-black">{user.phone}</td>
+                  {/* <td className="py-2 px-4 border-2 border-black">{user.address}</td> */}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <div className="flex justify-center mt-4">
+          <Pagination
+            count={Math.ceil(users.length / userRecordsPerPage)}
+            page={userPage}
+            onChange={handleUserPageChange}
+            color="primary"
+          />
+        </div>
+      </div>
+    </div>
+  )}
+</div>
+</div>
+
+
+
+
+
+
+
+
     </>
   );
 };

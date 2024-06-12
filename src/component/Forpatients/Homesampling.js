@@ -2,9 +2,15 @@ import React, { useState } from "react";
 import { Formik } from "formik";
 import * as yup from "yup";
 import Layout from "../Layout/Layout";
+import axios from "axios";
+import { toast } from "react-toastify";
+import { Navigate, useNavigate } from "react-router-dom";
 
 function Homesampling() {
   const [isExpanded, setExpanded] = useState(false);
+   
+  const navigate = useNavigate();
+
 
   const toggleExpand = () => {
     setExpanded(!isExpanded);
@@ -15,14 +21,31 @@ function Homesampling() {
     Email: yup.string().required(),
     city: yup.string().required(),
     Number: yup
-    .string()
-    .required()
-    .matches(/^\d{11}$/, "Phone number must be exactly 11 digits"),
+      .string()
+      .required()
+      .matches(/^\d{11}$/, "Phone number must be exactly 11 digits"),
+    address: yup.string().required(),
+    testName: yup.string(),
+    file: yup.mixed(),
+    date: yup.date(),
+    time: yup.string(),
   });
 
+  const handleFormSubmit = async (values) => {
+    try {
+      const response = await axios.post('http://localhost:4444/api/home-sampling', values);
+      console.log('Form submitted successfully:', response.data);
+      toast.success('Request submitted successfully');
+      navigate('/')
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      toast.error('Error submitting form:', error)
+    }
+  };
+
   return (
-    <Layout  className='bg-gray-300'>
-      <div >
+    <Layout className="bg-gray-300">
+      <div>
         <div className="object-cover">
           <img
             src="https://chughtailab.com/wp-content/uploads/2023/09/1350-x-280-15.jpg"
@@ -32,25 +55,26 @@ function Homesampling() {
         </div>
       </div>
 
-      <div className="container mx-auto    w-full  mdw-[85vw]">
-        <div className="grid    gridgrid-cols-2 gap-4">
+      <div className="container mx-auto w-full mdw-[85vw]">
+        <div className="grid lg:grid-cols-2 gap-4">
           <div>
             <Formik
               validationSchema={schema}
-              onSubmit={console.log}
+              onSubmit={handleFormSubmit}
               initialValues={{
                 firstName: "",
+                Email: "",
                 Number: "",
                 city: "",
+                address: "",
+                testName: "",
                 file: null,
+                date: "",
+                time: "",
               }}
             >
               {({ handleSubmit, handleChange, values, touched, errors }) => (
-                <form
-                  className="px-4 py-8 "
-                  noValidate
-                  onSubmit={handleSubmit}
-                >
+                <form className="px-4 py-8" noValidate onSubmit={handleSubmit}>
                   <div className="main-home">
                     <div className="left-sample">
                       <div className="left-form">
@@ -68,7 +92,7 @@ function Homesampling() {
                               name="firstName"
                               value={values.firstName}
                               onChange={handleChange}
-                              className={`form-input mt-1 block w-[60%]  py-2 border border-gray-300 ${
+                              className={`form-input mt-1 block w-[60%] py-2 border ${
                                 touched.firstName && !errors.firstName
                                   ? "border-green-500"
                                   : "border-red-500"
@@ -90,12 +114,12 @@ function Homesampling() {
                                 +92
                               </span>
                               <input
-                                type="number"
+                                type="text"
                                 placeholder="___ _________"
                                 name="Number"
                                 value={values.Number}
                                 onChange={handleChange}
-                                className={`form-input   w-[55%] border border-gray-300 ${
+                                className={`form-input w-[55%] border ${
                                   touched.Number && !errors.Number
                                     ? "border-green-500"
                                     : "border-red-500"
@@ -114,9 +138,15 @@ function Homesampling() {
                               Address
                             </span>
                             <textarea
+                              name="address"
+                              value={values.address}
+                              onChange={handleChange}
                               rows={3}
-                              className="form-textarea mt-1 block  w-[60%] border border-gray-300"
+                              className="form-textarea mt-1 block w-[60%] border border-gray-300"
                             />
+                            {touched.address && errors.address && (
+                              <span className="text-red-500">Required</span>
+                            )}
                           </label>
                         </div>
 
@@ -130,12 +160,12 @@ function Homesampling() {
                             value={values.city}
                             onChange={handleChange}
                           >
-                            <option>Select the City</option>
-                            <option value="1">Lahore</option>
-                            <option value="2">Karachi</option>
-                            <option value="3">Islamabad</option>
-                            <option value="4">Multan</option>
-                            <option value="5">Faisalabad</option>
+                            <option value="">Select the City</option>
+                            <option value="Lahore">Lahore</option>
+                            <option value="Karachi">Karachi</option>
+                            <option value="Islamabad">Islamabad</option>
+                            <option value="Multan">Multan</option>
+                            <option value="Faisalabad">Faisalabad</option>
                           </select>
                           {touched.city && errors.city && (
                             <span className="text-red-500">Required</span>
@@ -152,7 +182,10 @@ function Homesampling() {
                                 </span>
                                 <input
                                   type="email"
-                                  className="form-input mt-1 block py-2  w-[60%] border border-gray-300"
+                                  name="Email"
+                                  value={values.Email}
+                                  onChange={handleChange}
+                                  className="form-input mt-1 block py-2 w-[60%] border border-gray-300"
                                 />
                               </label>
                             </div>
@@ -162,7 +195,10 @@ function Homesampling() {
                                   Enter Your Test Name (optional)
                                 </span>
                                 <input
-                                  type="email"
+                                  type="text"
+                                  name="testName"
+                                  value={values.testName}
+                                  onChange={handleChange}
                                   className="form-input mt-1 block w-[60%] border border-gray-300 py-2"
                                 />
                               </label>
@@ -174,10 +210,12 @@ function Homesampling() {
                                 </span>
                                 <input
                                   type="file"
-                                  required
                                   name="file"
-                                  onChange={handleChange}
-                                  className={`form-input mt-1 block w-[60%] border border-gray-300  py-2${
+                                  onChange={(event) => {
+                                    const file = event.currentTarget.files[0];
+                                    handleChange({ target: { name: 'file', value: file } });
+                                  }}
+                                  className={`form-input mt-1 block w-[60%] border border-gray-300 py-2${
                                     touched.file && errors.file
                                       ? "border-red-500"
                                       : ""
@@ -193,7 +231,10 @@ function Homesampling() {
                                 <span className="text-[#2e3092]">Date</span>
                                 <input
                                   type="date"
-                                  className="form-input mt-1 block w-[60%] border border-gray-300  py-2"
+                                  name="date"
+                                  value={values.date}
+                                  onChange={handleChange}
+                                  className="form-input mt-1 block w-[60%] border border-gray-300 py-2"
                                 />
                               </label>
                             </div>
@@ -202,7 +243,10 @@ function Homesampling() {
                                 <span className="text-[#2e3092]">Time</span>
                                 <input
                                   type="time"
-                                  className="form-input mt-1 block w-[60%] border border-gray-300  py-2"
+                                  name="time"
+                                  value={values.time}
+                                  onChange={handleChange}
+                                  className="form-input mt-1 block w-[60%] border border-gray-300 py-2"
                                 />
                               </label>
                             </div>
@@ -215,6 +259,7 @@ function Homesampling() {
                             <br />
                             <br />
                             <button
+                              type="button"
                               onClick={toggleExpand}
                               className="read-less"
                             >
@@ -222,7 +267,11 @@ function Homesampling() {
                             </button>
                           </div>
                         ) : (
-                          <button onClick={toggleExpand} className="read-more">
+                          <button
+                            type="button"
+                            onClick={toggleExpand}
+                            className="read-more"
+                          >
                             Read More...
                           </button>
                         )}
@@ -235,7 +284,7 @@ function Homesampling() {
           </div>
 
           <div className="right">
-            <div className="  object-cover">
+            <div className="object-cover">
               <img
                 src="https://chughtailab.com/wp-content/uploads/2023/07/book_home_sampling-1-1024x858.jpg"
                 width="500px"

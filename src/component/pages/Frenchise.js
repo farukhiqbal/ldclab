@@ -51,7 +51,7 @@ const Frenchise = () => {
 
 
 
-      <div className="relative   w-full  ">
+      <div className="   w-full  ">
         <img
           src={banner}
           alt=""

@@ -4,13 +4,18 @@ import { Link } from "react-router-dom";
 import { animateScroll as scroll } from "react-scroll";
 import { FiAlignJustify } from "react-icons/fi";
 import { BsChevronDown, BsChevronUp } from "react-icons/bs";
-import { FaPhoneAlt, FaSearch } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaLinkedin, FaPhoneAlt, FaSearch, FaTwitter } from "react-icons/fa";
 import logo from "../../images/ldc.png";
 import { IoCartOutline } from "react-icons/io5";
 import { FaBarsStaggered } from "react-icons/fa6";
-
+import instagram from '../../images/instagram.png'
 import { HiOutlineMail } from "react-icons/hi";
 import CartPage from "../pages/CartPage";
+import { TiSocialGooglePlus } from "react-icons/ti";
+import facebook from '../../images/facebook.png';
+import linkedin from '../../images/linkedin.png'
+import twitter from '../../images/twitter.png'
+import youtube from '../../images/social.png'
 
 const Header = () => {
   const [nav, setNav] = useState(false);
@@ -67,11 +72,45 @@ const Header = () => {
       url: "#",
       submenu: true,
       dropdown: [
-        { name: "Departments", link: "/department " },
-        { name: "regional Lab", link: "/department " },
+        { name: "LDC ", link: "/department " },
+        { name: " WHY  LDC ", link: "/department " },
+        { name: " LDC   MISSION & VISION  ", link: "/department " },
+        { name: " LDC  CERTIFICATION & ACCREDITATION ", link: "/department " },
+        { name: " LDC  TEAM  ", link: "/department " },
+      
+        // { name: "", link: "/department " },
         { name: "  CAP Accredited Central Lab", link: "#" },
       ],
     },
+
+
+
+
+
+
+
+
+    {
+      text: "Services",
+      url: "#",
+      submenu: true,
+      dropdown: [
+        { name: "MOLECULAR PATHOLOGY", link: "/department " },
+        { name: "MICROBIOLOGY", link: "/department " },
+        { name: "SPECIAL CHEMISTRY", link: "/department " },
+        { name: "HEMATOLOGY", link: "/department " },
+        { name: "CHEMICAL PATHOLOGY", link: "/department " },
+        { name: "HISTOPATHOLOGY", link: "/department " },
+        { name: "IMMUNOLOGY & SEROLOGY", link: "/department " },
+        { name: "ENDOCRINOLOGY", link: "/department " },
+            ],
+    },
+
+
+
+  
+
+
 
     {
       text: " For Patients  ",
@@ -79,37 +118,68 @@ const Header = () => {
       dropdown: [
         { name: "  View report  ", link: "/viewreport" },
         { name: "  Book HomeSampling  ", link: "/homesampling" },
-        { name: "  Health cards  ", link: "/healthcard" },
-      ],
+             ],
     },
 
     {
       text: "For Doctor ",
       submenu: true,
       dropdown: [
-        { name: "      Toxicology Department", link: "/Toxicology" },
-        { name: "    Histopathology Department  ", link: "/Histopathology" },
-        {
-          name: "      Hematopathology Department  ",
-          link: "/Hematopathology",
-        },
-        {
-          name: "   Chemical Pathology Department  ",
-          link: "/ChemicalPathology",
-        },
-        { name: "    Microbiology Department  ", link: "/Microbiology" },
-        { name: "    Virology Department  ", link: "/Virology" },
-        { name: "   MOLECULAR GENETICS Department  ", link: "/molecular" },
+        { name: " LOGIN  ", link: "/Toxicology" },
+        { name: " VIEW REPORT   ", link: "/Toxicology" },
+        { name: " SUGGESTION  ", link: "/Toxicology" },
+        
       ],
     },
 
+
+        //  { text: "Opportunities", url: "#" },
+
+
+
+         {
+          text: "Opportunities ",
+          submenu: true,
+          dropdown: [
+            { name: " Entrepreneurship", link: "/" },
+            { name: "Franchise   Offer", link: "/" },
+            { name: "Marketing", link: "/" },
+            { name: "Community services membership", link: "/" },
+            { name: "LDC representative", link: "/" },
+            { name: "LDC  volunteer", link: "/" },
+            { name: "LDC  Blood donner  society", link: "/" },
+            { name: "LDC  CME society", link: "/" },
+            { name: "LDC  Medical awareness society ", link: "/" },
+            { name: "LDC  Brand Ambassador ", link: "/" },
+
+            
+          ],
+        },
+
+
+        {
+          text: "Complaint ",
+          submenu: true,
+          dropdown: [
+            { name: "Lodge complain", link: "/" },
+            { name: "Track complain", link: "/" },
+            { name: "Track complain", link: "/" },
+          
+
+            
+          ],
+        },
+
+        //  { text: "Complaint", url: "#" },
+
+
     { text: "Contact Us", url: "/contact" },
-    { text: "Login ", url: "/login" },
+    // { text: "Login ", url: "/login" },
   ];
 
   return (
     <>
-      <div className="  flex   justify-center   lg:justify-between   xl:justify-between  bg-[#8cc242]">
+      <div className="  flex   justify-center   lg:justify-between   xl:justify-between  bg-[#75a137e4]">
         <div className=" hidden           lg:flex pt-[5px] text-md font-[500]    md:ml-0   md:pr-[1rem]      xl:ml-4      lg:pr-[2rem] h-[40px] text-white   md:gap-x-[10px]  lg:gap-x-[20px]">
           <Link
             to="#"
@@ -136,7 +206,7 @@ const Header = () => {
         </div>
 
         <div className="flex       md:flex  text-[17px] font-[600] py-2 pr-1  md:pr-[1rem]   lg:mr-[5rem] xl:mr-[9rem]
-         bg-[#8cc242] h-[40px] text-white justify-center md:justify-end    lg:justify-end   xl:justify-end sm:gap-x-[10px] gap-x-[10px]  md:gap-x-[10px]">
+        bg-[#75a137e4] h-[40px] text-white justify-center md:justify-end    lg:justify-end   xl:justify-end sm:gap-x-[10px] gap-x-[10px]  md:gap-x-[10px]">
           <Link
             to="/login"
             className=" no-underline text-white cursor-pointer hover:text-[#2e3092] hover:text-underline"
@@ -147,7 +217,7 @@ const Header = () => {
             to="/register"
             className=" no-underline text-white cursor-pointer hover:text-[#2e3092]  "
           >
-            | &nbsp;Register
+            | &nbsp;Book HomeSampling
           </Link>
         </div>
       </div>
@@ -163,30 +233,74 @@ const Header = () => {
               {/* bars  */}
               <button
                 onClick={handleNav}
-                className=" absolute   top-[.8rem]        md:top-[1.8rem]      lg:top-[2.2rem] flex    right-4  md:right-[8em]  justify-right   px-2 p-2 text-xl font-medium text-black"
+                className=" absolute   top-[.8rem]     lg:hidden   md:top-[1.8rem]      lg:top-[2.2rem] flex    right-4  md:right-[8em]  justify-right   px-2 p-2 text-xl font-medium text-black"
               >
                 <FaBarsStaggered className="text-[1.6rem]" />
               </button>
 
-              <div className="absolute  hidden        xl:flex    w-[28rem] shadow-lg   justify-between border-2 rounded-lg mt-8    md:ml-[10rem]  lg:ml-[35rem]">
+
+
+
+
+            <div className="              hidden    lg:flex      lg:right-[9.5rem] absolute    ">
+                       
+            <ul className=" gap-4  flex  mt-9 social-network">
+                <li className="icoFacebook  shadow-lg  h-[2.5rem]  w-[2.5rem]">
+                  <Link to="#">
+                    {/* <FaFacebookF className="text-center  text-lg ml-2 mt-2" /> */}
+                      <img src={facebook}  alt="facebook logo icons "    className="pointer    hover:scale-[1.1]"/>
+                  </Link>
+                </li>
+                <li className="  rounded-[40px]    pointer shadow-lg h-[2.5rem]  w-[2.5rem]">
+                  {/* <FaTwitter className="text-center  text-lg ml-2 mt-2" /> */}
+                    <img src={twitter}  alt="twitter logo icon"  className="pointer   hover:scale-[1.1]"  />
+                </li>
+                <li className="rounded-[40px]  shadow-lg    cursor-pointer hover:bg-red-700 hover:text-white h-[2.5rem]  w-[2.5rem]">
+                  {/* <FaInstagram className="text-center  text-lg ml-2 mt-2" /> */}
+                     <img src={instagram}    className="hover:scale-[1.1]   cursor-pointer" alt="instagram logo icon" />
+                </li>
+                <li className="  rounded-[40px]    shadow-lg h-[2.5rem] w-[2.5rem]">
+                  {/* <FaLinkedin className="text-center  text-lg ml-2 mt-2" /> */}
+                    <img src={linkedin}  alt="linkedin logo"   className="hover:scale-[1.1]   cursor-pointer" />
+                </li>
+
+
+                <li className="  rounded-[40px]    shadow-lg h-[2.5rem] w-[2.5rem]">
+                  {/* <FaLinkedin className="text-center  text-lg ml-2 mt-2" /> */}
+                    <img src={youtube}  alt="linkedin logo"   className="hover:scale-[1.1]   cursor-pointer" />
+                </li>
+
+
+              </ul>     
+                     
+            </div>
+
+
+
+
+
+
+              {/* <div className="absolute  hidden        xl:flex    w-[28rem] shadow-lg   justify-between border-2 rounded-lg mt-8    md:ml-[10rem]  lg:ml-[35rem]"> */}
                 {/* <div className=""> */}
 
-                <div className="  w-[23rem] ">
+                {/* <div className="  w-[23rem] ">
                   <input
                     type="search"
                     placeholder="Search test"
                     className="py-2 px-2 rounded outline-none text-blue-600 w-full"
                   />
-                </div>
+                </div> */}
 
-                <div className="absolute right-0 top-0 ml-2 bg-blue-600 rounded-lg h-full w-[4.6rem] flex items-center justify-center">
+                {/* <div className="absolute right-0 top-0 ml-2 bg-blue-600 rounded-lg h-full w-[4.6rem] flex items-center justify-center">
                   <FaSearch className="text-white" />
-                </div>
-              </div>
+                </div> */}
+              {/* </div> */}
             </div>
-            <div className="  absolute    justify-right       right-[5rem]   md:right-[18rem]   mt-1   md:mt-5 ">
+
+
+            {/* <div className="      justify-right       right-[5rem]   md:right-[18rem]   mt-1   md:mt-5 ">
               <CartPage />
-            </div>
+            </div> */}
 
             <div className="flex  items-center h-full w-full ml-0  md:ml-[0.8rem]  lg:ml-[1.6rem]  xl:ml-[3rem]">
               <Link to="/" onClick={handleLinkClick}>
@@ -258,6 +372,16 @@ const Header = () => {
           </div> */}
         </div>
 
+                       
+
+
+
+
+
+
+
+
+
         <div
           className={
             nav
@@ -326,6 +450,108 @@ const Header = () => {
           </div>
         </div>
       </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{/* navbar ============================== */}
+
+
+
+
+
+
+
+
+
+
+      <div className=" bg-[#2e3092]    w-full">
+                                <div
+            className={`  md:text-[17px]   sticky   top-[10rem] z-[1100]  items-center font-[600] md:px- text-sm ${
+              showShadow ? "" : ""
+            }`}
+          >
+            <div className="   mr-[2rem]  lg:mr-[rem]">
+              <div className="hidden lg:inline Georgian">
+                <ul className="flex  justify-center  hover:cursor-pointer ">
+                  {navLinks.map((li, index) => (
+                    <li
+                      key={index}
+                      className="py-[2rem] px-5 hover:rounded duration-400 hover:bg-black/5 hover:text-red-700 drop-shadow-xl relative group"
+                    >
+                      <Link
+                        to={li.url}
+                        className="flex text-white no-underline  font-[640] text-[1.3rem]"
+                      >
+                        {li.text}
+                        {li.submenu ? (
+                          <span className="text-md    md:ml-2  inline ">
+                            <BsChevronDown />
+                          </span>
+                        ) : null}
+                      </Link>
+
+                      {li.submenu && (
+                        <div className="absolute top-[5.4rem] left-1 w-[250px]  hidden group-hover:block shadow-lg z-[999] bg-white">
+                          <div className="pt-2 py-1">
+                            <div className="w-3 h-4 absolute mt-5 rotate-45"></div>
+
+                            <div className="py-2 px-3 flex flex-col">
+                              {li.dropdown.map((mysublinks, subIndex) => (
+                                <div
+                                  className="text-black/80 py-[0.5rem]    hover:text-red-500"
+                                  key={subIndex}
+                                >
+                                  <Link
+                                    to={mysublinks.link}
+                                    className="text-black no-underline text-[17px]   "
+                                  >
+                                    <p className="text-md font-light hover:ml-2 hover:text-red-600 ease-out  duration-100 border-b border-black">
+                                      {mysublinks.name}
+                                    </p>
+                                    <p className=""></p>
+                                  </Link>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        </div>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+                            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </>
   );
 };

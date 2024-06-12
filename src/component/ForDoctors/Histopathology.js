@@ -6,7 +6,7 @@ import Whatsapp from "../pages/Whatsapp";
 const Histopathology = () => {
   return (
     <Layout>
-      <div className="relative   w-full  ">
+      <div className="   w-full  ">
         <img
           src={pathology}
           alt=""

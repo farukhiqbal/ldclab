@@ -25,6 +25,8 @@ import GetFranchise from "./Dashboard/GetFranchise";
 import GetAllTests from "./Dashboard/GetAllTests";
 import MainDashboard from "./Dashboard/MainDashboard";
 import Whatsappchat from "./component/pages/WhatsappChat";
+import UpdateFranchiseForm from "./Dashboard/UpdateFranchise";
+import GetHomesampling from "./Dashboard/GetHomesampling";
 
 function App() {
 
@@ -62,9 +64,11 @@ function App() {
 
            <Route  path='/' element={<Dashboard/>}>
 
-           <Route  path='dashboard/maindashboard' element={<MainDashboard/>}/>
+           <Route  path='dashboard/maindashboard'  nofollow element={<MainDashboard/>}/>
            <Route  path='dashboard/frenchise' element={<GetFranchise/>}/>
+           <Route  path='dashboard/edit-frenchise/:id' element={<UpdateFranchiseForm/>}/>
            <Route  path='dashboard/tests' element={<GetAllTests/>}/>
+           <Route  path='dashboard/homesampling' element={<GetHomesampling/>}/>
            </Route>
 
             

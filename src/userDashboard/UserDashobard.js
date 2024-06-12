@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 
 const { Header, Sider, Content } = Layout;
 
-const Dashboard = () => {
+const UserDashboard = () => {
   const [collapsed, setCollapsed] = useState(false);
 
   const toggleCollapsed = () => {
@@ -77,4 +77,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default UserDashboard;

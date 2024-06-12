@@ -13,7 +13,7 @@ const Hematopathology = () => {
     <Layout>
 
 
-<div className="relative   w-full  ">
+<div className="   w-full  ">
         <img
           src={hematopathology}
           alt=""

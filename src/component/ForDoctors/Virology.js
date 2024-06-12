@@ -7,7 +7,7 @@ import Whatsapp from "../pages/Whatsapp";
 const Virology = () => {
   return (
     <Layout>
-      <div className="relative   w-full  ">
+      <div className="  w-full  ">
         <img
           src={virology}
           alt=""

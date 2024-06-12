@@ -6,7 +6,7 @@ import chemical1 from "../../images/Chemical1.webp";
 const Chemicalpathology = () => {
   return (
     <Layout>
-      <div className="relative   w-full  ">
+      <div className="   w-full  ">
         <img
           src={chemical}
           alt=""

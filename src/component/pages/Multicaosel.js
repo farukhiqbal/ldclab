@@ -2,7 +2,6 @@ import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import microbiology from '../../images/microcarosel.jpeg'
-
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import virology from '../../images/biology.jpeg';
 import biochemistry   from '../../images/biochemistry.jpeg'
@@ -57,7 +56,7 @@ const MultiCarousel = ({ deviceType }) => {
        
           
           {
-            title: 'Biochemistry',
+            title: 'Chemical pathology',
             imagesrc: biochemistry,
             link: '#',
           },
