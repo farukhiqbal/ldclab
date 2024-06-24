@@ -14,7 +14,7 @@ const Whatsappchat = () => {
        phoneNumber="+923412312325"
        accountName="LDC Lab"
        avatar={logo}
-       chatMessage="how can help you sir   please write your name"
+       chatMessage="Thank you for contacting Lahore Diagnostic Center! Please let us know how we can help you."
        allowEsc
        allowClickAway
        notification

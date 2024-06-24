@@ -72,8 +72,8 @@ const Header = () => {
       url: "#",
       submenu: true,
       dropdown: [
-        { name: "LDC ", link: "/department " },
-        { name: " WHY  LDC ", link: "/department " },
+        { name: "LDC ", link: "/ldc" },
+        { name: " WHY  LDC ", link: "/whyldc" },
         { name: " LDC   MISSION & VISION  ", link: "/department " },
         { name: " LDC  CERTIFICATION & ACCREDITATION ", link: "/department " },
         { name: " LDC  TEAM  ", link: "/department " },
@@ -95,12 +95,12 @@ const Header = () => {
       url: "#",
       submenu: true,
       dropdown: [
-        { name: "MOLECULAR PATHOLOGY", link: "/department " },
-        { name: "MICROBIOLOGY", link: "/department " },
+        { name: "MOLECULAR PATHOLOGY", link: "/molecular " },
+        { name: "MICROBIOLOGY", link: "/Microbiology " },
         { name: "SPECIAL CHEMISTRY", link: "/department " },
-        { name: "HEMATOLOGY", link: "/department " },
-        { name: "CHEMICAL PATHOLOGY", link: "/department " },
-        { name: "HISTOPATHOLOGY", link: "/department " },
+        { name: "HEMATOLOGY", link: "/Hematopathology" },
+        { name: "CHEMICAL PATHOLOGY", link: "/ChemicalPathology " },
+        { name: "HISTOPATHOLOGY", link: "/Histopathology " },
         { name: "IMMUNOLOGY & SEROLOGY", link: "/department " },
         { name: "ENDOCRINOLOGY", link: "/department " },
             ],
@@ -246,7 +246,7 @@ const Header = () => {
                        
             <ul className=" gap-4  flex  mt-9 social-network">
                 <li className="icoFacebook  shadow-lg  h-[2.5rem]  w-[2.5rem]">
-                  <Link to="#">
+                  <Link to="https://www.facebook.com/LdcLaboratories?mibextid=ZbWKwL">
                     {/* <FaFacebookF className="text-center  text-lg ml-2 mt-2" /> */}
                       <img src={facebook}  alt="facebook logo icons "    className="pointer    hover:scale-[1.1]"/>
                   </Link>
