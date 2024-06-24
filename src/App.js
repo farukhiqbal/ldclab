@@ -29,6 +29,7 @@ import UpdateFranchiseForm from "./Dashboard/UpdateFranchise";
 import GetHomesampling from "./Dashboard/GetHomesampling";
 import LDC from "./component/aboutus/LDC";
 import WhyLdc from "./component/aboutus/WhyLdc";
+import MIssionVision from "./component/aboutus/MIssionVision";
 
 function App() {
 
@@ -57,6 +58,7 @@ function App() {
           <Route path='/register' element={<Signup/>}/>
           <Route path='/ldc' element={<LDC/>}/>
           <Route path='/whyldc' element={<WhyLdc/>}/>
+          <Route path='/mission-vision' element={<MIssionVision/>}/>
 
 
           <Route path='/homeSampling' element={<Homesampling/>}/>

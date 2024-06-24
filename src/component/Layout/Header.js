@@ -74,13 +74,11 @@ const Header = () => {
       dropdown: [
         { name: "LDC ", link: "/ldc" },
         { name: " WHY  LDC ", link: "/whyldc" },
-        { name: " LDC   MISSION & VISION  ", link: "/department " },
+        { name: " LDC   MISSION & VISION  ", link: "/mission-vision " },
         { name: " LDC  CERTIFICATION & ACCREDITATION ", link: "/department " },
         { name: " LDC  TEAM  ", link: "/department " },
       
-        // { name: "", link: "/department " },
-        { name: "  CAP Accredited Central Lab", link: "#" },
-      ],
+              ],
     },
 
 
@@ -162,7 +160,6 @@ const Header = () => {
           submenu: true,
           dropdown: [
             { name: "Lodge complain", link: "/" },
-            { name: "Track complain", link: "/" },
             { name: "Track complain", link: "/" },
           
 
