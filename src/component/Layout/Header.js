@@ -480,7 +480,7 @@ const Header = () => {
               showShadow ? "" : ""
             }`}
           >
-            <div className="   mr-[2rem]  lg:mr-[rem]">
+            <div className="   mr-[2rem]  md:mr-0  lg:mr-[rem]">
               <div className="hidden lg:inline Georgian">
                 <ul className="flex  justify-center  hover:cursor-pointer ">
                   {navLinks.map((li, index) => (
@@ -515,7 +515,7 @@ const Header = () => {
                                     to={mysublinks.link}
                                     className="text-black no-underline text-[17px]   "
                                   >
-                                    <p className="text-md font-light hover:ml-2 hover:text-red-600 ease-out  duration-100 border-b border-black">
+                                    <p className="text-md font-bold hover:ml-2 hover:text-red-600 ease-out  duration-100 border-b border-black">
                                       {mysublinks.name}
                                     </p>
                                     <p className=""></p>
