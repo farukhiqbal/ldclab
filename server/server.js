@@ -37,6 +37,21 @@ app.use('/api', franchiseRoutes);
 app.use('/api', homesamplingRoutes); // Corrected usage
 app.use('/api', jobsRoutes); // Corrected usage
 
+
+
+
+
+// / Alternatively, set headers manually
+app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', 'https://ldclab.vercel.app');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+  res.setHeader('Access-Control-Allow-Credentials', 'true');
+  next();
+});
+
+
+
 // app.get("/", (req, res) => {
 //   res.send("Server is running");
 // });
