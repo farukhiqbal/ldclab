@@ -8,7 +8,7 @@ import  authRoute  from './routes/authRoute.js';
 import formRoutes from './routes/formRoutes.js'
 import franchiseRoutes from './routes/franchiseRoutes.js'
 import homesampling from './routes/homesamplingRoutes.js'
-// import JobsForm from './routes/jobsRoutes.js'
+import JobsForm from './routes/jobsRoutes.js'
 // import path  from "path";
 const app = express();
 
@@ -39,7 +39,7 @@ app.use("/api/v1/auth", authRoute);
 app.use('/api/sampleBooking', formRoutes);
 app.use('/api', franchiseRoutes);
 app.use('/api',homesampling)
-// app.use('/api',JobsForm)
+app.use('/api',JobsForm)
 
 app.get("/", (req, res) => {
     res.send("server is running ");
