@@ -27,12 +27,12 @@ connectDB();
 
 // Use the CORS middleware
 app.use(cors({
-  origin: 'https://ldclab.vercel.app/', // Allow only localhost:3000
+  origin: 'https://ldclab.vercel.app', // Allow only localhost:3000
   credentials: true, // Include credentials
 }));
 
 app.use((req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "https://ldclab.vercel.app/");
+  res.setHeader("Access-Control-Allow-Origin", "https://ldclab.vercel.app");
   next();
 });
 
