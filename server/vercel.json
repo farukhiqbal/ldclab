@@ -1,16 +1,10 @@
 {
-   "version": 2,
-   "name": "ldc-lab",
-   "builds": [
-     { "src": "server.js", "use": "@vercel/node" }
-   ],
-   "routes": [
-     { "src": "/(.*)", "dest": "server.js" }
-   ],
-   "functions": {
-     "api/**/*.js": {
-       "maxDuration": 10
-     }
-   }
+    "version": 2,
+    "name": "ldc-lab",
+    "builds": [
+       { "src": "server.js", "use": "@vercel/node" }
+    ],
+    "routes": [
+       { "src": "/(.*)", "dest": "server.js" }
+    ]
  }
- 
