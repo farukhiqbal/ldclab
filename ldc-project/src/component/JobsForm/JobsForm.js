@@ -43,7 +43,7 @@ const JobsForm = () => {
         <div className="bg-white p-8 rounded shadow-md w-full max-w-4xl">
           <div className="flex    gap-[1rem]   md:gap-[1.5rem]   lg:gap-[2rem]   xl:gap-[3rem] mb-[3rem] items-center">
             <QRCode value="https://ldclab.vercel.app/job-form" className="mb-4" size={qrCodeSize} />
-            <h2 className="text-[1rem] md:text-[2rem] lg:text-[3rem] font-bold mb-6 text-center">Job Application Form</h2>
+            <h2 className="text-[1.5rem] md:text-[2rem] lg:text-[3rem] font-bold mb-6 text-center">Job Application Form</h2>
           </div>
           <form onSubmit={handleSubmit}>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
