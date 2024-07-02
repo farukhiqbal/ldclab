@@ -4,7 +4,7 @@ import upload from '../middlewares/blogMiddleware.js';
 
 const router = express.Router();
 
-router.post('/api/create-job', upload.single('profileImage'), createJob);          // Create a job application
+router.post('/create-job', upload.single('profileImage'), createJob);          // Create a job application
 router.get('/api/get-jobs', getJobs);                                            // Get all job applications
                                    
 
