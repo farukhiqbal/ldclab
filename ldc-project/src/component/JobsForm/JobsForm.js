@@ -3,6 +3,8 @@ import axios from 'axios';
 import QRCode from 'qrcode.react';
 import { useMediaQuery } from 'react-responsive';
 import Layout from '../Layout/Layout';
+import {toast} from 'react-toastify'
+
 
 const JobsForm = () => {
   const [formData, setFormData] = useState({
@@ -40,16 +42,19 @@ const JobsForm = () => {
     });
 
     try {
-      const response = await axios.post(`${process.env.REACT_APP_API}api/create-job`, formDataObj, {
+      const response = await axios.post(`${process.env.REACT_APP_API}/api/create-job`, formDataObj, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
       });
       console.log('Success:', response.data);
+        toast.success('success',response.data)
       setSubmitSuccess(true);
+
       setFormVisible(false);
     } catch (error) {
       console.error('Error submitting form:', error);
+      toast.error('Error    submitting form',  error )
       setSubmitSuccess(false);
     }
   };
