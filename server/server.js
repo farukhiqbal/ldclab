@@ -47,7 +47,11 @@ app.get("/", (req, res) => {
 
 
 
-
+  app.use((req, res, next) => {
+    res.setHeader("Access-Control-Allow-Origin", "https://ldclab.vercel.app/");
+    next();
+  });
+  
 
 //port
 const PORT = process.env.PORT ;
