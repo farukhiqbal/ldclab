@@ -41,7 +41,9 @@ app.use('/api', franchiseRoutes);
 app.use('/api',homesampling)
 // app.use('/api',JobsForm)
 
-
+app.get("/", (req, res) => {
+    res.send("server is running ");
+  });
 //rest api
 // app.use('*',function(req,res){
 //   req.sendFile(path.join(__dirname,'./client/build/index.html'));
