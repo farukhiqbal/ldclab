@@ -37,9 +37,9 @@ app.use('/api', franchiseRoutes);
 app.use('/api', homesamplingRoutes); // Corrected usage
 app.use('/api', jobsRoutes); // Corrected usage
 
-app.get("/", (req, res) => {
-  res.send("Server is running");
-});
+// app.get("/", (req, res) => {
+//   res.send("Server is running");
+// });
 
 // Port
 const PORT = process.env.PORT || 5000; // Added default port
