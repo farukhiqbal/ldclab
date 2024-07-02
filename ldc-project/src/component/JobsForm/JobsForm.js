@@ -40,7 +40,7 @@ const JobsForm = () => {
     });
 
     try {
-      const response = await axios.post('https://ldclabbackend.vercel.app/', formDataObj, {
+      const response = await axios.post('https://ldclabbackend.vercel.app/api/create-job', formDataObj, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
