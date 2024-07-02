@@ -22,7 +22,8 @@ connectDB();
 
 
 //middleware
-app.use(cors());
+app.use(cors({ credentials: true, origin: "https://ldclab.vercel.app" }));
+
 app.use(express.json());
 app.use(morgan('dev'));
 // app._router(express.static(path.join(__dirname,'./client/build')))
@@ -48,7 +49,7 @@ app.get("/", (req, res) => {
 
 
   app.use((req, res, next) => {
-    res.setHeader("Access-Control-Allow-Origin", "https://ldclab.vercel.app/");
+    res.setHeader("Access-Control-Allow-Origin", "https://ldclab.vercel.app");
     next();
   });
   
