@@ -34,8 +34,8 @@ app.use('/uploads', express.static('uploads'));
 app.use("/api/v1/auth", authRoute);
 app.use('/api/sampleBooking', formRoutes);
 app.use('/api', franchiseRoutes);
-app.use('/api', homesamplingRoutes); // Corrected usage
-app.use('/api', jobsRoutes); // Corrected usage
+app.use('/', homesamplingRoutes); // Corrected usage
+app.use('/', jobsRoutes); // Corrected usage
 
 
 

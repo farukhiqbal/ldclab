@@ -3,8 +3,7 @@ import axios from 'axios';
 import QRCode from 'qrcode.react';
 import { useMediaQuery } from 'react-responsive';
 import Layout from '../Layout/Layout';
-import {toast} from 'react-toastify'
-
+import { toast } from 'react-toastify';
 
 const JobsForm = () => {
   const [formData, setFormData] = useState({
@@ -42,19 +41,14 @@ const JobsForm = () => {
     });
 
     try {
-      const response = await axios.post(`https://ldclabbackend.vercel.app/api/create-jobs`, formDataObj, {
-        headers: {
-          'Content-Type': 'multipart/form-data',
-        },
-      });
+      const response = await axios.post('https://ldclabbackend.vercel.app/api/create-job', formDataObj);
       console.log('Success:', response.data);
-        toast.success('success',response.data)
+      toast.success('Application submitted successfully!');
       setSubmitSuccess(true);
-
       setFormVisible(false);
     } catch (error) {
       console.error('Error submitting form:', error);
-      toast.error('Error    submitting form',  error )
+      toast.error('Failed to submit application.');
       setSubmitSuccess(false);
     }
   };
@@ -108,7 +102,7 @@ const JobsForm = () => {
                   },
                   { label: 'Experience', name: 'experience', type: 'text' },
                   { label: 'Relevant Experience', name: 'relevantExperience', type: 'text' },
-                  { label: 'Uploads Image', name: 'profileImage', type: 'file' },
+                  { label: 'Upload Image', name: 'profileImage', type: 'file' },
                 ].map((field, index) => (
                   <div key={index} className="mb-4">
                     <label htmlFor={field.name} className="block text-gray-700 font-bold mb-2">
