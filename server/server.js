@@ -4,10 +4,10 @@ import dotenv from 'dotenv';
 import morgan from "morgan";
 import connectDB from "./config/db.js";
 import cors from 'cors';
-import authRoute from './routes/authRoute.js';
-import formRoutes from './routes/formRoutes.js';
-import franchiseRoutes from './routes/franchiseRoutes.js';
-import homesamplingRoutes from './routes/homesamplingRoutes.js'; // Corrected import
+// import authRoute from './routes/authRoute.js';
+// import formRoutes from './routes/formRoutes.js';
+// import franchiseRoutes from './routes/franchiseRoutes.js';
+// import homesamplingRoutes from './routes/homesamplingRoutes.js'; // Corrected import
 import jobsRoutes from './routes/jobsRoutes.js'; // Corrected import
 
 const app = express();
@@ -32,10 +32,10 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/uploads', express.static('uploads'));
 
 // Routes
-app.use("/api/v1/auth", authRoute);
-app.use('/api/sampleBooking', formRoutes);
-app.use('/api', franchiseRoutes);
-app.use('/', homesamplingRoutes); // Corrected usage
+// app.use("/api/v1/auth", authRoute);
+// app.use('/api/sampleBooking', formRoutes);
+// app.use('/api', franchiseRoutes);
+// app.use('/', homesamplingRoutes); // Corrected usage
 app.use('/', jobsRoutes); // Corrected usage
 
 
