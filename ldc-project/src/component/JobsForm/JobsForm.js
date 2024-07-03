@@ -68,9 +68,9 @@ const JobsForm = () => {
             <form onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 {[
-                  { label: 'Name', name: 'name', type: 'text' },
+                  { label: 'Name', name: 'name', type: 'text', required: true },
                   { label: 'Address', name: 'address', type: 'text' },
-                  { label: 'Phone', name: 'phone', type: 'number', maxLength: 11 },
+                  { label: 'Phone', name: 'phone', type: 'number', maxLength: 11, required: true },
                   { label: 'Email', name: 'email', type: 'email' },
                   { label: 'City', name: 'city', type: 'text' },
                   { label: 'CNIC', name: 'cnic', type: 'number', maxLength: 13 },
@@ -102,7 +102,7 @@ const JobsForm = () => {
                   },
                   { label: 'Experience', name: 'experience', type: 'text' },
                   { label: 'Relevant Experience', name: 'relevantExperience', type: 'text' },
-                  { label: 'Upload Image', name: 'profileImage', type: 'file' },
+                  { label: 'Upload Image', name: 'profileImage', type: 'file', accept: 'image/*' },
                 ].map((field, index) => (
                   <div key={index} className="mb-4">
                     <label htmlFor={field.name} className="block text-gray-700 font-bold mb-2">
@@ -110,11 +110,11 @@ const JobsForm = () => {
                     </label>
                     {field.type === 'select' ? (
                       <select
-                        required
                         id={field.name}
                         name={field.name}
                         value={formData[field.name]}
                         onChange={handleChange}
+                        required={field.required}
                         className={`w-full px-3 py-2 border ${formErrors[field.name] ? 'border-red-500' : 'border-gray-300'} rounded`}
                       >
                         <option value="">Select</option>
@@ -126,13 +126,14 @@ const JobsForm = () => {
                       </select>
                     ) : (
                       <input
-                        required
                         id={field.name}
                         name={field.name}
                         type={field.type}
                         maxLength={field.maxLength}
+                        accept={field.accept}
                         value={field.type === 'file' ? undefined : formData[field.name]}
                         onChange={handleChange}
+                        required={field.required}
                         className={`w-full px-3 py-2 border ${formErrors[field.name] ? 'border-red-500' : 'border-gray-300'} rounded`}
                       />
                     )}
