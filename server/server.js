@@ -20,7 +20,7 @@ connectDB();
 
 // Middleware
 app.use(cors({
-  origin: 'https://ldclab.vercel.app', // Allow only ldclab.vercel.app
+  origin: 'http://localhost:3000', // Allow only ldclab.vercel.app
   credentials: true, // Include credentials
 }));
 
@@ -44,7 +44,7 @@ app.use('/', jobsRoutes); // Corrected usage
 
 // / Alternatively, set headers manually
 app.use((req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', 'https://ldclab.vercel.app');
+  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
   res.setHeader('Access-Control-Allow-Credentials', 'true');
