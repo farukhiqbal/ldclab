@@ -41,7 +41,7 @@ const JobsForm = () => {
     });
 
     try {
-      const response = await axios.post('http://localhost:4444/create-job', formDataObj);
+      const response = await axios.post('http://localhost:5000/create-job', formDataObj);
       console.log('Success:', response.data);
       toast.success('Application submitted successfully!');
       setSubmitSuccess(true);

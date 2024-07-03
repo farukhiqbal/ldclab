@@ -58,7 +58,7 @@ app.get("/", (req, res) => {
 });
 
 // Port
-const PORT = process.env.PORT || 5000; // Added default port
+const PORT = process.env.PORT || 4000; // Added default port
 
 // Run server
 app.listen(PORT, () => {
