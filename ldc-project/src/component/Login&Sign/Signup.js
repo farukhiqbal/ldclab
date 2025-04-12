@@ -19,13 +19,13 @@ function Signup() {
     e.preventDefault();
     try {
       const res = await axios.post(
-        'http://localhost:4444/api/v1/auth/register',
+        `${process.env.REACT_APP_API}/api/v1/auth/register`,
         { name, email, password, phone, address, answer }
       );
 
       if (res.data.success) {
         toast.success(res.data.message);
-        navigate("/login");
+        navigate("/");
       } else {
         toast.error(res.data.message);
       }

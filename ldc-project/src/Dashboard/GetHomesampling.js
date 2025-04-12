@@ -9,7 +9,7 @@ const GetHomesampling = () => {
   useEffect(() => {
     const fetchHomeSampling = async () => {
       try {
-        const response = await axios.get('http://localhost:4444/api/get-sample');
+        const response = await axios.get(`${process.env.REACT_APP_API}/api/get-sample`);
         setHomeSamplingList(response.data);
       } catch (error) {
         console.error('Error fetching home sampling data:', error);

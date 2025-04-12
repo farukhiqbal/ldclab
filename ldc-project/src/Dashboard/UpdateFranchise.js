@@ -29,7 +29,7 @@ const UpdateFranchise = () => {
   useEffect(() => {
     const fetchFranchise = async () => {
       try {
-        const response = await axios.get(`http://localhost:4444/api/franchises/${id}`);
+        const response = await axios.get(`${process.env.REACT_APP_API}/api/franchises/${id}`);
         setFormData(response.data);
       } catch (error) {
         console.error('Error fetching franchise data:', error);
@@ -68,7 +68,7 @@ const UpdateFranchise = () => {
     });
 
     try {
-      const response = await axios.put(`http://localhost:4444/api/franchise/${id}`, data);
+      const response = await axios.put(`${process.env.REACT_APP_API}/api/franchise/${id}`, data);
       setSubmissionStatus('Franchise updated successfully');
       console.log(response.data);
       toast.success('Franchise updated successfully');
@@ -94,7 +94,7 @@ const UpdateFranchise = () => {
       <div className="min-h-screen flex items-center justify-center bg-gray-100 p-4">
         <div className="bg-white p-8 rounded shadow-md w-full max-w-4xl">
           <div className="flex gap-[3rem] mb-[3rem] items-center">
-            <QRCode value={`https://ldclab.vercel.app/franchiseform/${id}`} className="mb-4" size={qrCodeSize} />
+            <QRCode value={`${process.env.REACT_APP_API}/franchiseform/${id}`} className="mb-4" size={qrCodeSize} />
             <h2 className="text-[1.5rem] md:text-[2rem] lg:text-[3rem] font-bold mb-6 text-center">Edit Franchise Information</h2>
           </div>
           <form onSubmit={handleSubmit}>

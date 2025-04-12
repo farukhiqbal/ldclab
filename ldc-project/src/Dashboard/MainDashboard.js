@@ -46,7 +46,7 @@ const MainDashboard = () => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await axios.get('http://localhost:4444/api/v1/auth/getUsers');
+        const response = await axios.get(`${process.env.REACT_APP_API}/api/v1/auth/getUsers`);
         setUsers(response.data.users);
         setUserLoading(false);
       } catch (error) {
