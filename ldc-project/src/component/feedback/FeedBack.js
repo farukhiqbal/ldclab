@@ -25,7 +25,10 @@ const FeedBack = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/api/add-feedback", form);
+      await axios.post(
+        "https://ldc-lab-backend.vercel.app/api/add-feedback",
+        form
+      );
       toast.success("Feedback submitted successfully!");
       setForm({
         name: "",
@@ -60,8 +63,13 @@ const FeedBack = () => {
           <div className="flex gap-4 mb-6 items-center">
             <QRCode value="https://ldclab.vercel.app/feedback" size={64} />
             <h2 className="text-2xl lg:text-3xl font-bold text-center w-full">
-              We are thrilled to have you join Lahore Diagnostic Center
+              <p>We are thrilled to have you join</p>
+              Lahore Diagnostic Center
             </h2>
+
+            {/* <h2 className="text-2xl lg:text-3xl font-bold text-center w-full">
+              We are thrilled to have you join Lahore Diagnostic Center
+            </h2> */}
           </div>
 
           {submitted ? (
