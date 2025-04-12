@@ -61,10 +61,10 @@ const FeedBack = () => {
       <div className="min-h-screen flex items-center justify-center bg-gray-100 p-4">
         <div className="bg-white p-8 rounded shadow-md w-full max-w-4xl">
           <div className="flex gap-4 mb-6 items-center">
-            <QRCode value="https://ldclab.vercel.app/feedback" size={64} />
-            <h2 className="text-2xl lg:text-3xl font-bold text-center w-full">
-              <p>We are thrilled to have you join</p>
+            <QRCode value="https://ldclab.vercel.app/feedback" size={100} />
+            <h2 className=" text-lg    md:text-xl  lg:text-2xl xl:text-3xl font-bold text-center w-full">
               Lahore Diagnostic Center
+              <p className=" font-[500]      text-lg    md:text-xl  lg:text-2xl xl:text-2xl      ">We are thrilled to have you join</p>
             </h2>
 
             {/* <h2 className="text-2xl lg:text-3xl font-bold text-center w-full">
